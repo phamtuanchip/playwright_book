@@ -41,6 +41,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `code/component-testing/` (project riêng) | 25 — component testing với `@playwright/experimental-ct-react` |
 | `fixtures.ts` (fixture `workerAccount`, `isolatedLoggedInPage`) + `tests/ch26-custom-fixtures-nang-cao.spec.ts` + `tools/simple-reporter.js` | 26 — fixture worker-scoped + custom reporter |
 | `utils/resilient-locate.ts` + `tests/ch29-self-healing.spec.ts` | 29 — self-healing locator (thử nhiều chiến lược theo thứ tự) |
+| `pages/ForgotPasswordPage.ts` + `tests/ch30-case-study.spec.ts` | 30 — case study: tự động hoá đầy đủ tính năng "Quên mật khẩu" mới thêm vào demo-app |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 

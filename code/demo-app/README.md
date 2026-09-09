@@ -26,6 +26,8 @@ báo `webServer` để Playwright tự khởi động app này trước khi ch�
 | `GET /logout` | Xoá session |
 | `GET /profile` | Form hồ sơ: text input, textarea, dropdown, checkbox, upload file (Chương 13) |
 | `POST /api/profile` | API cập nhật hồ sơ (multipart/form-data, dùng `multer`) |
+| `GET /forgot-password` | Form quên mật khẩu (Chương 30 — case study) |
+| `POST /api/forgot-password` | Luôn trả về cùng thông báo, không tiết lộ email có tồn tại hay không |
 | `POST /api/test/reset` | **Chỉ dùng cho test**: seed lại tài khoản demo (xoá lockout, reset số lần sai) — xem Chương 22 |
 | `POST /api/test/seed-failed-attempts` | **Chỉ dùng cho test**: đặt trực tiếp số lần đăng nhập sai (`{ email, count }`) — seed nhanh cho TC-07, không cần lặp UI/API N lần (Chương 22) |
 | `POST /api/test/create-user` | **Chỉ dùng cho test**: tạo tài khoản mới độc lập (`{ email, password }`) — nền tảng chạy test song song an toàn, mỗi worker 1 tài khoản riêng (Chương 23) |

@@ -15,7 +15,13 @@ const {
   setFailedAttempts,
   createUser,
 } = require("./src/store");
-const { loginPage, dashboardPage, ordersPage, profilePage } = require("./src/views");
+const {
+  loginPage,
+  forgotPasswordPage,
+  dashboardPage,
+  ordersPage,
+  profilePage,
+} = require("./src/views");
 
 const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 2 * 1024 * 1024 } });
 
@@ -81,6 +87,21 @@ app.post("/api/login", (req, res) => {
   const sid = createSession(user.email);
   res.cookie("sid", sid, { httpOnly: true });
   res.json({ ok: true });
+});
+
+app.get("/forgot-password", (req, res) => {
+  if (currentUser(req)) return res.redirect("/dashboard");
+  res.send(forgotPasswordPage());
+});
+
+app.post("/api/forgot-password", (req, res) => {
+  const { email } = req.body || {};
+  // Không tiết lộ email có tồn tại hay không (cùng nguyên tắc với TC-03, Chương 1/3) — LUÔN
+  // trả về đúng một thông báo, bất kể email có trong hệ thống hay không.
+  res.json({
+    ok: true,
+    message: "Nếu email tồn tại trong hệ thống, hướng dẫn đặt lại mật khẩu đã được gửi.",
+  });
 });
 
 app.get("/logout", (req, res) => {

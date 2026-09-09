@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 29/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 30/33 đã hoàn thành (xong Phần VI), đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -106,7 +106,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 27. ✅ Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test — [`book/part6-ai-mcp/ch27-mcp-la-gi.md`](book/part6-ai-mcp/ch27-mcp-la-gi.md) · code: [`code/mcp-basics/`](code/mcp-basics/)
 28. ✅ Playwright MCP server — để AI agent điều khiển trình duyệt — [`book/part6-ai-mcp/ch28-playwright-mcp-server.md`](book/part6-ai-mcp/ch28-playwright-mcp-server.md) · code: [`code/playwright-mcp-demo/`](code/playwright-mcp-demo/)
 29. ✅ Kết hợp AI sinh test case, self-healing test khi UI thay đổi — [`book/part6-ai-mcp/ch29-ai-sinh-test-case.md`](book/part6-ai-mcp/ch29-ai-sinh-test-case.md) · code: [`code/playwright-tests/utils/resilient-locate.ts`](code/playwright-tests/utils/resilient-locate.ts)
-30. Case study thực tế: xây pipeline test bán tự động với AI + Playwright
+30. ✅ Case study thực tế: xây pipeline test bán tự động với AI + Playwright — [`book/part6-ai-mcp/ch30-case-study.md`](book/part6-ai-mcp/ch30-case-study.md) · code: [`code/playwright-tests/tests/ch30-case-study.spec.ts`](code/playwright-tests/tests/ch30-case-study.spec.ts)
 
 ### Phụ lục
 - A. Best practices & checklist automation test
@@ -136,7 +136,7 @@ dụng đúng pipeline đã kiểm chứng.
 - [x] Viết xong Phần III (Chương 7–9: cài đặt, khởi tạo project Playwright, demo app) + code chạy được
 - [x] Viết xong Phần IV (Chương 10–19: kiến trúc Playwright → locators → POM → fixtures → debug → reporting → CI/CD), 31 test pass, 2 bug thật tìm & sửa
 - [x] Viết xong Phần V (Chương 20–26: API testing → visual → storage state → song song → cross-browser → component testing → fixtures nâng cao), 55 test pass
-- [ ] Viết Phần VI (AI/MCP, Chương 27–30)
+- [x] Viết xong Phần VI (Chương 27–30: MCP → Playwright MCP server → AI/self-healing → case study), 63 test pass
 - [ ] Viết Phụ lục A–C
 - [ ] Review toàn bộ nội dung
 - [ ] Build bản PDF

@@ -49,9 +49,33 @@ function loginPage() {
       </div>
       <div class="server-error" id="server-error" role="alert"></div>
       <button type="submit" id="submit-btn">Đăng nhập</button>
+      <p><a href="/forgot-password">Quên mật khẩu?</a></p>
     </form>
   </main>
   <script src="/login.js"></script>
+  `
+  );
+}
+
+function forgotPasswordPage() {
+  return layout(
+    "Quên mật khẩu",
+    `
+  <main class="forgot-password-page">
+    <h1>Quên mật khẩu</h1>
+    <p>Nhập email đã đăng ký, chúng tôi sẽ gửi hướng dẫn đặt lại mật khẩu.</p>
+    <form id="forgot-password-form" novalidate>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="username">
+        <span class="field-error" id="email-error"></span>
+      </div>
+      <div class="server-success" id="server-success" role="status"></div>
+      <button type="submit" id="submit-btn">Gửi hướng dẫn</button>
+    </form>
+    <p><a href="/login">Quay lại đăng nhập</a></p>
+  </main>
+  <script src="/forgot-password.js"></script>
   `
   );
 }
@@ -146,4 +170,4 @@ function navBar() {
   </nav></header>`;
 }
 
-module.exports = { loginPage, dashboardPage, ordersPage, profilePage };
+module.exports = { loginPage, forgotPasswordPage, dashboardPage, ordersPage, profilePage };
