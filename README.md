@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 5/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 6/33 đã hoàn thành (xong Phần II), đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -68,7 +68,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 ### Phần II — Vai trò QA & Automation QA
 4. ✅ PQA (Product QA), FQA (Functional QA), TQA (Test/Technical QA) — phân biệt & trách nhiệm — [`book/part2-qa-roles/ch04-pqa-fqa-tqa.md`](book/part2-qa-roles/ch04-pqa-fqa-tqa.md) · ví dụ: [`code/ch04-pqa-fqa-tqa/`](code/ch04-pqa-fqa-tqa/)
 5. ✅ Automation QA là gì? Khi nào nên tự động hoá, khi nào không — [`book/part2-qa-roles/ch05-automation-qa-la-gi.md`](book/part2-qa-roles/ch05-automation-qa-la-gi.md) · ví dụ: [`code/ch05-automation-qa-la-gi/`](code/ch05-automation-qa-la-gi/)
-6. Kỹ năng & tư duy cần có của một Automation QA Engineer
+6. ✅ Kỹ năng & tư duy cần có của một Automation QA Engineer — [`book/part2-qa-roles/ch06-ky-nang-automation-qa.md`](book/part2-qa-roles/ch06-ky-nang-automation-qa.md) · ví dụ: [`code/ch06-ky-nang-automation-qa/`](code/ch06-ky-nang-automation-qa/)
 
 ### Phần III — Cài đặt môi trường
 7. Cài đặt Node.js, quản lý package (npm/pnpm), VS Code & extension hữu ích
@@ -126,7 +126,8 @@ dụng đúng pipeline đã kiểm chứng.
 - [x] Chốt mục lục chi tiết
 - [x] Dựng khung project (`book/`, `code/`, `tools/build.js`, `package.json`) + build HTML lần đầu
 - [x] Viết xong Phần I (Chương 1–3: SDLC, các loại kiểm thử, test case/plan/bug report) + ví dụ
-- [ ] Viết Phần II–III (Chương 4–9)
+- [x] Viết xong Phần II (Chương 4–6: PQA/FQA/TQA, automation QA, kỹ năng) + ví dụ
+- [ ] Viết Phần III (Chương 7–9)
 - [ ] Viết Phần IV (Playwright cơ bản, Chương 10–19) — cần dựng demo app trước (Chương 9)
 - [ ] Viết Phần V (Playwright nâng cao, Chương 20–26)
 - [ ] Viết Phần VI (AI/MCP, Chương 27–30)
