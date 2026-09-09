@@ -28,6 +28,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `tests/ch08-smoke.spec.ts` | 8 — khởi tạo project, xác nhận cài đặt |
 | `tests/ch09-demo-app-smoke.spec.ts` | 9 — giới thiệu demo app |
 | `tests/ch11-login-test-cases.spec.ts` | 11 — tự động hoá đầy đủ TC-01→TC-10 (Chương 1) bằng locators/actions/assertions |
+| `tests/ch12-cau-truc-test.spec.ts` | 12 — `test.describe`, 4 loại hook, `test.step` |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 
