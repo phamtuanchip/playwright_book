@@ -12,10 +12,179 @@
 </head>
 <body>
 <button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
-<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">Automation Testing với Playwright</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần I — Nền tảng QA trong SDLC</div><ul><li class=""><a href="../part1-qa-fundamentals/ch01-sdlc.html">1. SDLC là gì? Vị trí của kiểm thử (Testing) trong vòng đời phát triển phần mềm</a></li><li class=""><a href="../part1-qa-fundamentals/ch02-loai-kiem-thu.html">2. Các loại kiểm thử: Manual vs Automation, Unit / Integration / E2E / Regression</a></li><li class=""><a href="../part1-qa-fundamentals/ch03-test-case-plan-bug.html">3. Test case, test plan, bug report — những khái niệm cơ bản mọi QA cần biết</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần II — Vai trò QA &amp; Automation QA</div><ul><li class=""><a href="../part2-qa-roles/ch04-pqa-fqa-tqa.html">4. PQA (Product QA), FQA (Functional QA), TQA (Test/Technical QA) — phân biệt &amp; trách nhiệm</a></li><li class=""><a href="../part2-qa-roles/ch05-automation-qa-la-gi.html">5. Automation QA là gì? Khi nào nên tự động hoá, khi nào không</a></li><li class=""><a href="../part2-qa-roles/ch06-ky-nang-automation-qa.html">6. Kỹ năng &amp; tư duy cần có của một Automation QA Engineer</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần III — Cài đặt môi trường</div><ul><li class=""><a href="../part3-setup/ch07-cai-dat-nodejs.html">7. Cài đặt Node.js, quản lý package (npm/pnpm), VS Code &amp; extension hữu ích</a></li><li class=""><a href="../part3-setup/ch08-khoi-tao-project-playwright.html">8. Khởi tạo project Playwright, cấu trúc thư mục project</a></li><li class=""><a href="../part3-setup/ch09-demo-app.html">9. Giới thiệu demo app dùng xuyên suốt sách</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần IV — Playwright cơ bản</div><ul><li class=""><a href="../part4-playwright-basics/ch10-playwright-la-gi.html">10. Playwright là gì? Kiến trúc, so sánh nhanh với Selenium/Cypress</a></li><li class=""><a href="../part4-playwright-basics/ch11-locators-actions-assertions.html">11. Test đầu tiên: Locators, Actions, Assertions</a></li><li class=""><a href="../part4-playwright-basics/ch12-cau-truc-test.html">12. Cấu trúc test: test, describe, hooks (beforeEach/afterEach)</a></li><li class=""><a href="../part4-playwright-basics/ch13-form-input-upload.html">13. Làm việc với form, input, dropdown, upload file</a></li><li class=""><a href="../part4-playwright-basics/ch14-auto-waiting-network.html">14. Auto-waiting, xử lý bất đồng bộ, network</a></li><li class=""><a href="../part4-playwright-basics/ch15-page-object-model.html">15. Page Object Model (POM) — tổ chức code test dễ bảo trì</a></li><li class=""><a href="../part4-playwright-basics/ch16-fixtures-co-ban.html">16. Fixtures cơ bản, tái sử dụng logic test</a></li><li class=""><a href="../part4-playwright-basics/ch17-debug-trace-viewer.html">17. Debug: Trace Viewer, UI Mode, --debug, codegen</a></li><li class=""><a href="../part4-playwright-basics/ch18-reporting.html">18. Reporting: HTML reporter, tích hợp Allure</a></li><li class=""><a href="../part4-playwright-basics/ch19-cicd-github-actions.html">19. CI/CD: chạy Playwright trên GitHub Actions</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần V — Playwright nâng cao</div><ul><li class=""><a href="../part5-playwright-advanced/ch20-api-testing.html">20. API testing với request context (kết hợp UI + API test)</a></li><li class=""><a href="../part5-playwright-advanced/ch21-visual-testing.html">21. Visual testing / so sánh screenshot</a></li><li class=""><a href="../part5-playwright-advanced/ch22-auth-storage-state.html">22. Authentication &amp; storage state (test app có đăng nhập)</a></li><li class=""><a href="../part5-playwright-advanced/ch23-song-song-sharding.html">23. Chạy song song, sharding, tối ưu tốc độ test suite</a></li><li class=""><a href="../part5-playwright-advanced/ch24-cross-browser-mobile.html">24. Cross-browser testing &amp; mobile emulation</a></li><li class=""><a href="../part5-playwright-advanced/ch25-component-testing.html">25. Component testing với Playwright</a></li><li class=""><a href="../part5-playwright-advanced/ch26-custom-fixtures-nang-cao.html">26. Custom fixtures nâng cao, viết plugin/reporter riêng</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần VI — Nâng cao: AI + MCP / Browser Automation</div><ul><li class=""><a href="../part6-ai-mcp/ch27-mcp-la-gi.html">27. Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test</a></li><li class=""><a href="../part6-ai-mcp/ch28-playwright-mcp-server.html">28. Playwright MCP server — để AI agent điều khiển trình duyệt</a></li><li class=""><a href="../part6-ai-mcp/ch29-ai-sinh-test-case.html">29. Kết hợp AI sinh test case, self-healing test khi UI thay đổi</a></li><li class=""><a href="../part6-ai-mcp/ch30-case-study.html">30. Case study thực tế: xây pipeline test bán tự động với AI + Playwright</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class="planned"><a href="./appendix-a-best-practices.html">Phụ lục A — Best practices &amp; checklist automation test</a></li><li class="planned active"><a href="./appendix-b-loi-thuong-gap.html">Phụ lục B — Các lỗi thường gặp và cách xử lý (troubleshooting)</a></li><li class="planned"><a href="./appendix-c-tai-lieu-tham-khao.html">Phụ lục C — Tài liệu tham khảo &amp; cộng đồng</a></li></ul></div></nav>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">Automation Testing với Playwright</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần I — Nền tảng QA trong SDLC</div><ul><li class=""><a href="../part1-qa-fundamentals/ch01-sdlc.html">1. SDLC là gì? Vị trí của kiểm thử (Testing) trong vòng đời phát triển phần mềm</a></li><li class=""><a href="../part1-qa-fundamentals/ch02-loai-kiem-thu.html">2. Các loại kiểm thử: Manual vs Automation, Unit / Integration / E2E / Regression</a></li><li class=""><a href="../part1-qa-fundamentals/ch03-test-case-plan-bug.html">3. Test case, test plan, bug report — những khái niệm cơ bản mọi QA cần biết</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần II — Vai trò QA &amp; Automation QA</div><ul><li class=""><a href="../part2-qa-roles/ch04-pqa-fqa-tqa.html">4. PQA (Product QA), FQA (Functional QA), TQA (Test/Technical QA) — phân biệt &amp; trách nhiệm</a></li><li class=""><a href="../part2-qa-roles/ch05-automation-qa-la-gi.html">5. Automation QA là gì? Khi nào nên tự động hoá, khi nào không</a></li><li class=""><a href="../part2-qa-roles/ch06-ky-nang-automation-qa.html">6. Kỹ năng &amp; tư duy cần có của một Automation QA Engineer</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần III — Cài đặt môi trường</div><ul><li class=""><a href="../part3-setup/ch07-cai-dat-nodejs.html">7. Cài đặt Node.js, quản lý package (npm/pnpm), VS Code &amp; extension hữu ích</a></li><li class=""><a href="../part3-setup/ch08-khoi-tao-project-playwright.html">8. Khởi tạo project Playwright, cấu trúc thư mục project</a></li><li class=""><a href="../part3-setup/ch09-demo-app.html">9. Giới thiệu demo app dùng xuyên suốt sách</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần IV — Playwright cơ bản</div><ul><li class=""><a href="../part4-playwright-basics/ch10-playwright-la-gi.html">10. Playwright là gì? Kiến trúc, so sánh nhanh với Selenium/Cypress</a></li><li class=""><a href="../part4-playwright-basics/ch11-locators-actions-assertions.html">11. Test đầu tiên: Locators, Actions, Assertions</a></li><li class=""><a href="../part4-playwright-basics/ch12-cau-truc-test.html">12. Cấu trúc test: test, describe, hooks (beforeEach/afterEach)</a></li><li class=""><a href="../part4-playwright-basics/ch13-form-input-upload.html">13. Làm việc với form, input, dropdown, upload file</a></li><li class=""><a href="../part4-playwright-basics/ch14-auto-waiting-network.html">14. Auto-waiting, xử lý bất đồng bộ, network</a></li><li class=""><a href="../part4-playwright-basics/ch15-page-object-model.html">15. Page Object Model (POM) — tổ chức code test dễ bảo trì</a></li><li class=""><a href="../part4-playwright-basics/ch16-fixtures-co-ban.html">16. Fixtures cơ bản, tái sử dụng logic test</a></li><li class=""><a href="../part4-playwright-basics/ch17-debug-trace-viewer.html">17. Debug: Trace Viewer, UI Mode, --debug, codegen</a></li><li class=""><a href="../part4-playwright-basics/ch18-reporting.html">18. Reporting: HTML reporter, tích hợp Allure</a></li><li class=""><a href="../part4-playwright-basics/ch19-cicd-github-actions.html">19. CI/CD: chạy Playwright trên GitHub Actions</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần V — Playwright nâng cao</div><ul><li class=""><a href="../part5-playwright-advanced/ch20-api-testing.html">20. API testing với request context (kết hợp UI + API test)</a></li><li class=""><a href="../part5-playwright-advanced/ch21-visual-testing.html">21. Visual testing / so sánh screenshot</a></li><li class=""><a href="../part5-playwright-advanced/ch22-auth-storage-state.html">22. Authentication &amp; storage state (test app có đăng nhập)</a></li><li class=""><a href="../part5-playwright-advanced/ch23-song-song-sharding.html">23. Chạy song song, sharding, tối ưu tốc độ test suite</a></li><li class=""><a href="../part5-playwright-advanced/ch24-cross-browser-mobile.html">24. Cross-browser testing &amp; mobile emulation</a></li><li class=""><a href="../part5-playwright-advanced/ch25-component-testing.html">25. Component testing với Playwright</a></li><li class=""><a href="../part5-playwright-advanced/ch26-custom-fixtures-nang-cao.html">26. Custom fixtures nâng cao, viết plugin/reporter riêng</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần VI — Nâng cao: AI + MCP / Browser Automation</div><ul><li class=""><a href="../part6-ai-mcp/ch27-mcp-la-gi.html">27. Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test</a></li><li class=""><a href="../part6-ai-mcp/ch28-playwright-mcp-server.html">28. Playwright MCP server — để AI agent điều khiển trình duyệt</a></li><li class=""><a href="../part6-ai-mcp/ch29-ai-sinh-test-case.html">29. Kết hợp AI sinh test case, self-healing test khi UI thay đổi</a></li><li class=""><a href="../part6-ai-mcp/ch30-case-study.html">30. Case study thực tế: xây pipeline test bán tự động với AI + Playwright</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class=""><a href="./appendix-a-best-practices.html">Phụ lục A — Best practices &amp; checklist automation test</a></li><li class="active"><a href="./appendix-b-loi-thuong-gap.html">Phụ lục B — Các lỗi thường gặp và cách xử lý (troubleshooting)</a></li><li class=""><a href="./appendix-c-tai-lieu-tham-khao.html">Phụ lục C — Tài liệu tham khảo &amp; cộng đồng</a></li></ul></div></nav>
 <main class="content">
 <article>
-<h1>Phụ lục B — Các lỗi thường gặp và cách xử lý (troubleshooting)</h1><p class="tbd">Chương này đang được biên soạn.</p>
+<h1>Phụ lục B: Các lỗi thường gặp và cách xử lý (tra cứu nhanh theo triệu chứng)</h1>
+<p>Tổng hợp toàn bộ mục &quot;Lỗi thường gặp&quot; trong 30 chương, tổ chức theo <strong>triệu chứng</strong> để tra cứu
+nhanh khi gặp lỗi tương tự — mỗi dòng trỏ lại chương gốc có giải thích chi tiết.</p>
+<h2>Test fail ngẫu nhiên (flaky), không nhất quán</h2>
+<table>
+<thead>
+<tr>
+<th>Triệu chứng</th>
+<th>Nguyên nhân thường gặp</th>
+<th>Xem lại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test đôi khi pass đôi khi fail, không đổi gì trong code</td>
+<td>Dùng <code>waitForTimeout</code> thay vì auto-waiting; máy chạy nhanh/chậm khác nhau</td>
+<td>Chương 6, 14</td>
+</tr>
+<tr>
+<td>Test pass riêng lẻ nhưng fail khi chạy cùng lúc với test khác</td>
+<td>Nhiều test dùng chung dữ liệu/tài khoản, chạy song song gây đụng độ</td>
+<td>Chương 11, 23</td>
+</tr>
+<tr>
+<td>Test pass trên máy dev, fail trên CI</td>
+<td>Thiếu <code>npm ci</code>/cài đặt đầy đủ trên CI; visual test baseline tạo trên OS khác</td>
+<td>Chương 19, 21</td>
+</tr>
+</tbody>
+</table>
+<h2>Locator không tìm được phần tử, hoặc tìm nhầm</h2>
+<table>
+<thead>
+<tr>
+<th>Triệu chứng</th>
+<th>Nguyên nhân thường gặp</th>
+<th>Xem lại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>strict mode violation: resolved to N elements</code></td>
+<td>Locator khớp nhiều phần tử — thường do <code>aria-label</code>/text trùng lặp một phần</td>
+<td>Chương 9, 11</td>
+</tr>
+<tr>
+<td>Locator hoạt động lúc viết, vỡ sau khi dev đổi UI</td>
+<td>Dùng CSS selector/cấu trúc DOM thay vì role/label</td>
+<td>Chương 6, 11, 29</td>
+</tr>
+<tr>
+<td><code>getByLabel</code> không tìm được input</td>
+<td>Input thiếu <code>&lt;label for&gt;</code> liên kết, hoặc dùng <code>aria-label</code> không khớp</td>
+<td>Chương 11</td>
+</tr>
+</tbody>
+</table>
+<h2>Network / async không như mong đợi</h2>
+<table>
+<thead>
+<tr>
+<th>Triệu chứng</th>
+<th>Nguyên nhân thường gặp</th>
+<th>Xem lại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI &quot;treo im lặng&quot; khi server lỗi</td>
+<td>Code frontend gọi <code>res.json()</code> mà không kiểm tra <code>res.ok</code>/bọc try-catch</td>
+<td>Chương 14</td>
+</tr>
+<tr>
+<td><code>waitForResponse</code> bị treo mãi</td>
+<td>Gọi <code>waitForResponse</code> SAU khi đã trigger request, bị lỡ response</td>
+<td>Chương 14, 20</td>
+</tr>
+<tr>
+<td>Test gọi API nhưng <code>page</code> vẫn coi là chưa đăng nhập</td>
+<td>Dùng <code>request</code> (độc lập) thay vì <code>page.request</code> (chung context)</td>
+<td>Chương 20</td>
+</tr>
+</tbody>
+</table>
+<h2>Cấu hình / môi trường</h2>
+<table>
+<thead>
+<tr>
+<th>Triệu chứng</th>
+<th>Nguyên nhân thường gặp</th>
+<th>Xem lại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Executable doesn't exist</code> khi chạy test</td>
+<td>Quên <code>npx playwright install</code> sau khi <code>npm install</code></td>
+<td>Chương 8</td>
+</tr>
+<tr>
+<td><code>webServer</code> timeout chờ URL sẵn sàng</td>
+<td>Thiếu <code>npm install</code> ở project server (demo-app), hoặc chưa chạy đúng thư mục</td>
+<td>Chương 9, 19</td>
+</tr>
+<tr>
+<td>CI fail ở project firefox/webkit nhưng chromium pass</td>
+<td>Chỉ cài Chromium (<code>playwright install chromium</code>), thiếu 2 engine còn lại</td>
+<td>Chương 24</td>
+</tr>
+<tr>
+<td>MCP server treo, không phản hồi</td>
+<td>Quên <code>await server.connect(transport)</code></td>
+<td>Chương 27</td>
+</tr>
+</tbody>
+</table>
+<h2>Reporting / debug</h2>
+<table>
+<thead>
+<tr>
+<th>Triệu chứng</th>
+<th>Nguyên nhân thường gặp</th>
+<th>Xem lại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Không có báo cáo HTML Allure dù đã cài <code>allure-playwright</code></td>
+<td>Thiếu bước sinh báo cáo cuối bằng Allure CLI (cần Java) — package Node.js chỉ ghi dữ liệu thô</td>
+<td>Chương 18</td>
+</tr>
+<tr>
+<td>Trace/report quá nặng, chiếm nhiều dung lượng</td>
+<td>Đặt <code>trace: &quot;on&quot;</code> cho chạy hàng ngày thay vì <code>&quot;on-first-retry&quot;</code></td>
+<td>Chương 17</td>
+</tr>
+</tbody>
+</table>
+<h2>Tư duy / quy trình (không phải lỗi kỹ thuật)</h2>
+<table>
+<thead>
+<tr>
+<th>Triệu chứng</th>
+<th>Nguyên nhân thường gặp</th>
+<th>Xem lại</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test pass nhưng không phát hiện được bug thật</td>
+<td>Assertion mơ hồ, không khớp đúng &quot;Kết quả mong đợi&quot; gốc</td>
+<td>Chương 3, 6, 13</td>
+</tr>
+<tr>
+<td>Automation suite bị bỏ qua khi báo fail</td>
+<td>Tích tụ flaky test lâu ngày, đội ngũ mất niềm tin vào suite</td>
+<td>Chương 6</td>
+</tr>
+<tr>
+<td>Code sinh bởi <code>codegen</code>/AI dùng thẳng, không sửa</td>
+<td>Thiếu bước review/tinh gọn trước khi coi là test hoàn chỉnh</td>
+<td>Chương 17, 29</td>
+</tr>
+</tbody>
+</table>
+<h2>Cách dùng phụ lục này</h2>
+<p>Khi gặp lỗi mới không có trong bảng: (1) đọc kỹ thông báo lỗi đầy đủ trước khi tra cứu, (2) tìm
+chương liên quan tới <strong>loại thao tác</strong> đang thực hiện (locator, network, config...), (3) áp dụng
+quy trình debug đã học ở Chương 17 (Trace Viewer, Console tab) trước khi đoán mò.</p>
+
 </article>
 <div class="prev-next"><a class="prev" href="./appendix-a-best-practices.html">&larr; Phụ lục A — Best practices &amp; checklist automation test</a><a class="next" href="./appendix-c-tai-lieu-tham-khao.html">Phụ lục C — Tài liệu tham khảo &amp; cộng đồng &rarr;</a></div>
 </main>

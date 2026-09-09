@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 30/33 đã hoàn thành (xong Phần VI), đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 31/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -109,7 +109,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 30. ✅ Case study thực tế: xây pipeline test bán tự động với AI + Playwright — [`book/part6-ai-mcp/ch30-case-study.md`](book/part6-ai-mcp/ch30-case-study.md) · code: [`code/playwright-tests/tests/ch30-case-study.spec.ts`](code/playwright-tests/tests/ch30-case-study.spec.ts)
 
 ### Phụ lục
-- A. Best practices & checklist automation test
+- A. ✅ Best practices & checklist automation test — [`book/part7-appendix/appendix-a-best-practices.md`](book/part7-appendix/appendix-a-best-practices.md)
 - B. Các lỗi thường gặp và cách xử lý (troubleshooting)
 - C. Tài liệu tham khảo & cộng đồng
 
