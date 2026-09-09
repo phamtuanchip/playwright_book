@@ -6,7 +6,10 @@
     "test": "playwright test",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
-    "report": "playwright show-report"
+    "test:debug": "playwright test --debug",
+    "test:trace": "playwright test --trace on",
+    "report": "playwright show-report",
+    "show-trace": "playwright show-trace"
   },
   "keywords": [],
   "author": "",
