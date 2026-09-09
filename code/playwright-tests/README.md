@@ -33,6 +33,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `tests/ch14-auto-waiting-network.spec.ts` | 14 — auto-waiting với mạng chậm, `waitForResponse`, giả lập lỗi server bằng `page.route` |
 | `pages/LoginPage.ts`, `pages/ProfilePage.ts` + `tests/ch15-page-object-model.spec.ts` | 15 — Page Object Model, viết lại TC-01/TC-02 qua POM |
 | `fixtures.ts` + `tests/ch16-fixtures-co-ban.spec.ts` | 16 — custom fixture `loggedInPage` (setup + teardown quanh `use()`) |
+| `tests/ch20-api-testing.spec.ts` | 20 — API test thuần qua `request`, và kỹ thuật `page.request` để đăng nhập nhanh trước khi test UI |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 
