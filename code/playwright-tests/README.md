@@ -31,6 +31,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `tests/ch12-cau-truc-test.spec.ts` | 12 — `test.describe`, 4 loại hook, `test.step` |
 | `tests/ch13-form-input-upload.spec.ts` | 13 — text/textarea/select/checkbox/upload file (trang `/profile`) |
 | `tests/ch14-auto-waiting-network.spec.ts` | 14 — auto-waiting với mạng chậm, `waitForResponse`, giả lập lỗi server bằng `page.route` |
+| `pages/LoginPage.ts`, `pages/ProfilePage.ts` + `tests/ch15-page-object-model.spec.ts` | 15 — Page Object Model, viết lại TC-01/TC-02 qua POM |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 
