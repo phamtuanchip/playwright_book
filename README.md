@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 25/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 26/33 đã hoàn thành (xong Phần V), đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -98,7 +98,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 23. ✅ Chạy song song, sharding, tối ưu tốc độ test suite — [`book/part5-playwright-advanced/ch23-song-song-sharding.md`](book/part5-playwright-advanced/ch23-song-song-sharding.md) · code: [`code/playwright-tests/tests/ch23-song-song-sharding.spec.ts`](code/playwright-tests/tests/ch23-song-song-sharding.spec.ts)
 24. ✅ Cross-browser testing & mobile emulation — [`book/part5-playwright-advanced/ch24-cross-browser-mobile.md`](book/part5-playwright-advanced/ch24-cross-browser-mobile.md) · code: [`code/playwright-tests/tests/ch24-cross-browser-mobile.spec.ts`](code/playwright-tests/tests/ch24-cross-browser-mobile.spec.ts)
 25. ✅ Component testing với Playwright — [`book/part5-playwright-advanced/ch25-component-testing.md`](book/part5-playwright-advanced/ch25-component-testing.md) · code: [`code/component-testing/`](code/component-testing/)
-26. Custom fixtures nâng cao, viết plugin/reporter riêng
+26. ✅ Custom fixtures nâng cao, viết plugin/reporter riêng — [`book/part5-playwright-advanced/ch26-custom-fixtures-nang-cao.md`](book/part5-playwright-advanced/ch26-custom-fixtures-nang-cao.md) · code: [`code/playwright-tests/tools/simple-reporter.js`](code/playwright-tests/tools/simple-reporter.js)
 
 ### Phần VI — Nâng cao: AI + MCP / Browser Automation
 27. Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test
@@ -133,8 +133,7 @@ dụng đúng pipeline đã kiểm chứng.
 - [x] Viết xong Phần II (Chương 4–6: PQA/FQA/TQA, automation QA, kỹ năng) + ví dụ
 - [x] Viết xong Phần III (Chương 7–9: cài đặt, khởi tạo project Playwright, demo app) + code chạy được
 - [x] Viết xong Phần IV (Chương 10–19: kiến trúc Playwright → locators → POM → fixtures → debug → reporting → CI/CD), 31 test pass, 2 bug thật tìm & sửa
-- [ ] Viết Phần V (Playwright nâng cao, Chương 20–26)
-- [ ] Viết Phần V (Playwright nâng cao, Chương 20–26)
+- [x] Viết xong Phần V (Chương 20–26: API testing → visual → storage state → song song → cross-browser → component testing → fixtures nâng cao), 55 test pass
 - [ ] Viết Phần VI (AI/MCP, Chương 27–30)
 - [ ] Viết Phụ lục A–C
 - [ ] Review toàn bộ nội dung

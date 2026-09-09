@@ -15,7 +15,9 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   // Chương 18: chạy CÙNG LÚC 2 reporter — "html" (đã dùng từ đầu) và "allure-playwright"
   // (ghi kết quả thô vào allure-results/, xem Chương 18 để biết cách sinh báo cáo HTML từ đó).
-  reporter: [["html"], ["allure-playwright"]],
+  // Chương 26: thêm reporter tuỳ biến "./tools/simple-reporter.js" — chỉ cần đường dẫn tới
+  // file export một class có onBegin/onTestEnd/onEnd, không cần cài package nào.
+  reporter: [["html"], ["allure-playwright"], ["./tools/simple-reporter.js"]],
 
   // Chương 22: chạy 1 lần trước MỌI test (không phải mỗi file) — đăng nhập qua API, lưu
   // cookie session vào storageState.json để các test dùng `test.use({ storageState: ... })`

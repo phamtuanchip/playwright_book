@@ -38,6 +38,8 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `global-setup.ts` + `tests/ch22-auth-storage-state.spec.ts` | 22 — storage state (`storageState.json`) + endpoint seed `/api/test/seed-failed-attempts` cho TC-07 |
 | `tests/ch23-song-song-sharding.spec.ts` | 23 — chạy song song AN TOÀN (mỗi worker 1 tài khoản riêng qua `/api/test/create-user`), kiểm chứng thật với `--workers=4` |
 | `tests/ch24-cross-browser-mobile.spec.ts` | 24 — chạy trên 4 project (chromium/firefox/webkit/mobile-chrome), khai báo trong `playwright.config.ts` |
+| `code/component-testing/` (project riêng) | 25 — component testing với `@playwright/experimental-ct-react` |
+| `fixtures.ts` (fixture `workerAccount`, `isolatedLoggedInPage`) + `tests/ch26-custom-fixtures-nang-cao.spec.ts` + `tools/simple-reporter.js` | 26 — fixture worker-scoped + custom reporter |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 
