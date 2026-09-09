@@ -4,7 +4,9 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 32/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: ĐÃ VIẾT XONG TOÀN BỘ 30 chương + 3 phụ lục (33/33), có bản HTML build được, 63 test
+> Playwright chạy thật và pass, 2 bug thật được tìm & sửa trong quá trình viết. Xem `dist/index.html`
+> để đọc bản HTML. Còn lại: PDF, EPUB (mục 5).**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -111,7 +113,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 ### Phụ lục
 - A. ✅ Best practices & checklist automation test — [`book/part7-appendix/appendix-a-best-practices.md`](book/part7-appendix/appendix-a-best-practices.md)
 - B. ✅ Các lỗi thường gặp và cách xử lý (troubleshooting) — [`book/part7-appendix/appendix-b-loi-thuong-gap.md`](book/part7-appendix/appendix-b-loi-thuong-gap.md)
-- C. Tài liệu tham khảo & cộng đồng
+- C. ✅ Tài liệu tham khảo & cộng đồng — [`book/part7-appendix/appendix-c-tai-lieu-tham-khao.md`](book/part7-appendix/appendix-c-tai-lieu-tham-khao.md)
 
 ## 5. Pipeline xuất bản (HTML → PDF → EPUB)
 
@@ -137,7 +139,7 @@ dụng đúng pipeline đã kiểm chứng.
 - [x] Viết xong Phần IV (Chương 10–19: kiến trúc Playwright → locators → POM → fixtures → debug → reporting → CI/CD), 31 test pass, 2 bug thật tìm & sửa
 - [x] Viết xong Phần V (Chương 20–26: API testing → visual → storage state → song song → cross-browser → component testing → fixtures nâng cao), 55 test pass
 - [x] Viết xong Phần VI (Chương 27–30: MCP → Playwright MCP server → AI/self-healing → case study), 63 test pass
-- [ ] Viết Phụ lục A–C
+- [x] Viết xong Phụ lục A–C (best practices, troubleshooting, tài liệu tham khảo)
 - [ ] Review toàn bộ nội dung
 - [ ] Build bản PDF
 - [ ] Build bản EPUB
