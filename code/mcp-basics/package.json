@@ -1,0 +1,19 @@
+{
+  "name": "mcp-basics",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Vi du MCP server/client toi gian (Chuong 27), doc lap voi cac project khac trong sach.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node client.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.5.4"
+  }
+}

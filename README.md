@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 26/33 đã hoàn thành (xong Phần V), đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 27/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -53,7 +53,8 @@ playwright_book/
 │   ├── playwright-tests/      # Phần IV-VI: MỘT project Playwright chung, xây dần qua chương
 │   │                           # (tests/chXX-*.spec.ts) — xem lý do trong README của nó
 │   ├── demo-app/               # Web app mẫu (từ Chương 9), tests/ ở trên chạy nhằm vào đây
-│   └── component-testing/      # Chương 25: project React riêng biệt, minh hoạ component testing
+│   ├── component-testing/      # Chương 25: project React riêng biệt, minh hoạ component testing
+│   └── mcp-basics/              # Chương 27: MCP server/client tối giản, chạy được thật
 ├── tools/                     # Script build HTML (tools/build.js) + CSS (tools/style.css)
 ├── dist/                      # HTML đã build (commit sẵn) — chạy `npm run build` để sinh lại
 └── README.md                  # File kế hoạch này
@@ -101,7 +102,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 26. ✅ Custom fixtures nâng cao, viết plugin/reporter riêng — [`book/part5-playwright-advanced/ch26-custom-fixtures-nang-cao.md`](book/part5-playwright-advanced/ch26-custom-fixtures-nang-cao.md) · code: [`code/playwright-tests/tools/simple-reporter.js`](code/playwright-tests/tools/simple-reporter.js)
 
 ### Phần VI — Nâng cao: AI + MCP / Browser Automation
-27. Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test
+27. ✅ Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test — [`book/part6-ai-mcp/ch27-mcp-la-gi.md`](book/part6-ai-mcp/ch27-mcp-la-gi.md) · code: [`code/mcp-basics/`](code/mcp-basics/)
 28. Playwright MCP server — để AI agent điều khiển trình duyệt
 29. Kết hợp AI sinh test case, self-healing test khi UI thay đổi
 30. Case study thực tế: xây pipeline test bán tự động với AI + Playwright
