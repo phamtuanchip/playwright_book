@@ -40,6 +40,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `tests/ch24-cross-browser-mobile.spec.ts` | 24 — chạy trên 4 project (chromium/firefox/webkit/mobile-chrome), khai báo trong `playwright.config.ts` |
 | `code/component-testing/` (project riêng) | 25 — component testing với `@playwright/experimental-ct-react` |
 | `fixtures.ts` (fixture `workerAccount`, `isolatedLoggedInPage`) + `tests/ch26-custom-fixtures-nang-cao.spec.ts` + `tools/simple-reporter.js` | 26 — fixture worker-scoped + custom reporter |
+| `utils/resilient-locate.ts` + `tests/ch29-self-healing.spec.ts` | 29 — self-healing locator (thử nhiều chiến lược theo thứ tự) |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 

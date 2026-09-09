@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Vi du dieu khien Playwright qua MCP (@playwright/mcp) - Chuong 28, yeu cau demo-app dang chay o localhost:3000.",
+  "description": "Vi du dieu khien Playwright qua MCP (@playwright/mcp) - Chuong 28-29, yeu cau demo-app dang chay o localhost:3000.",
   "scripts": {
     "list-tools": "node list-tools.js",
-    "demo": "node demo.js"
+    "demo": "node demo.js",
+    "generate": "node generate-test-skeleton.js"
   },
   "keywords": [],
   "author": "",

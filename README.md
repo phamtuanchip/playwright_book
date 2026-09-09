@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 28/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 29/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -105,7 +105,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 ### Phần VI — Nâng cao: AI + MCP / Browser Automation
 27. ✅ Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test — [`book/part6-ai-mcp/ch27-mcp-la-gi.md`](book/part6-ai-mcp/ch27-mcp-la-gi.md) · code: [`code/mcp-basics/`](code/mcp-basics/)
 28. ✅ Playwright MCP server — để AI agent điều khiển trình duyệt — [`book/part6-ai-mcp/ch28-playwright-mcp-server.md`](book/part6-ai-mcp/ch28-playwright-mcp-server.md) · code: [`code/playwright-mcp-demo/`](code/playwright-mcp-demo/)
-29. Kết hợp AI sinh test case, self-healing test khi UI thay đổi
+29. ✅ Kết hợp AI sinh test case, self-healing test khi UI thay đổi — [`book/part6-ai-mcp/ch29-ai-sinh-test-case.md`](book/part6-ai-mcp/ch29-ai-sinh-test-case.md) · code: [`code/playwright-tests/utils/resilient-locate.ts`](code/playwright-tests/utils/resilient-locate.ts)
 30. Case study thực tế: xây pipeline test bán tự động với AI + Playwright
 
 ### Phụ lục

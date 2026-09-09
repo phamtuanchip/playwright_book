@@ -1,4 +1,4 @@
-# playwright-mcp-demo — Ví dụ Chương 28
+# playwright-mcp-demo — Ví dụ Chương 28-29
 
 Điều khiển trình duyệt thật thông qua **Playwright MCP server chính thức**
 (`@playwright/mcp`) — không gọi một dòng Playwright API nào trực tiếp, mọi thao tác đi qua tool
@@ -14,6 +14,7 @@ cd ../demo-app && npm start
 npm install
 npm run list-tools   # xem toàn bộ tool Playwright MCP server expose
 npm run demo          # đăng nhập vào demo-app HOÀN TOÀN qua MCP tool calls
+npm run generate -- http://localhost:3000/login   # sinh khung test từ accessibility snapshot (Chương 29)
 ```
 
 Output thật khi chạy `npm run demo` (đã kiểm chứng khi viết chương):
@@ -33,3 +34,7 @@ Output thật khi chạy `npm run demo` (đã kiểm chứng khi viết chương
 
 - `list-tools.js` — kết nối tới `@playwright/mcp`, in ra toàn bộ tool nó expose.
 - `demo.js` — kịch bản "agent" tự đăng nhập vào demo-app qua các tool đó, tự xác minh kết quả.
+- `generate-test-skeleton.js` — quét accessibility snapshot của một URL, sinh khung test
+  Playwright bằng heuristic (KHÔNG gọi LLM thật — xem Chương 29 để hiểu ranh giới với AI thật).
+- `example-generated-login.spec.ts` — kết quả THẬT của `npm run generate` chạy trên `/login`,
+  giữ lại làm ví dụ tham khảo (không phải file được generate lại mỗi lần chạy).
