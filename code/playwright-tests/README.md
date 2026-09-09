@@ -34,6 +34,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `pages/LoginPage.ts`, `pages/ProfilePage.ts` + `tests/ch15-page-object-model.spec.ts` | 15 — Page Object Model, viết lại TC-01/TC-02 qua POM |
 | `fixtures.ts` + `tests/ch16-fixtures-co-ban.spec.ts` | 16 — custom fixture `loggedInPage` (setup + teardown quanh `use()`) |
 | `tests/ch20-api-testing.spec.ts` | 20 — API test thuần qua `request`, và kỹ thuật `page.request` để đăng nhập nhanh trước khi test UI |
+| `tests/ch21-visual-testing.spec.ts` | 21 — `toHaveScreenshot()`; bị `test.skip` trên CI vì baseline tạo trên Windows (xem README này, mục dưới) |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 
@@ -42,6 +43,15 @@ chương trước (Page Object Model — Chương 15, fixtures — Chương 16..
 rộng** ở chương sau — đúng với cách một project Playwright thật vận hành trong công việc thực tế.
 Tách mỗi chương thành một project riêng sẽ buộc phải copy lại `playwright.config.ts` và các page
 object nhiều lần, không phản ánh đúng thực tế.
+
+## Ghi chú: vì sao test visual (Chương 21) bị bỏ qua trên CI?
+
+Ảnh baseline trong `tests/ch21-visual-testing.spec.ts-snapshots/` được tạo trên máy Windows viết
+sách này — tên file có hậu tố `-win32`. CI (`.github/workflows/playwright.yml`, Chương 19) chạy
+trên `ubuntu-latest` — ảnh chụp màn hình render khác nhau giữa hệ điều hành (font, anti-aliasing),
+nên baseline Windows sẽ luôn không khớp trên Linux. `ch21-visual-testing.spec.ts` tự `test.skip`
+khi `process.env.CI` được đặt, để không làm CI đỏ giả. Cách khắc phục đúng trong thực tế: tạo
+baseline bằng Docker image chính thức của Playwright (cùng OS với CI), không tạo trên máy dev.
 
 ## Ghi chú: vì sao `workers: 1` (chạy tuần tự) từ Chương 11?
 
