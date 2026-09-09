@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 13/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 14/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -83,7 +83,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 11. ✅ Test đầu tiên: Locators, Actions, Assertions — [`book/part4-playwright-basics/ch11-locators-actions-assertions.md`](book/part4-playwright-basics/ch11-locators-actions-assertions.md) · code: [`code/playwright-tests/tests/ch11-login-test-cases.spec.ts`](code/playwright-tests/tests/ch11-login-test-cases.spec.ts)
 12. ✅ Cấu trúc test: `test`, `describe`, hooks (`beforeEach`/`afterEach`) — [`book/part4-playwright-basics/ch12-cau-truc-test.md`](book/part4-playwright-basics/ch12-cau-truc-test.md) · code: [`code/playwright-tests/tests/ch12-cau-truc-test.spec.ts`](code/playwright-tests/tests/ch12-cau-truc-test.spec.ts)
 13. ✅ Làm việc với form, input, dropdown, upload file — [`book/part4-playwright-basics/ch13-form-input-upload.md`](book/part4-playwright-basics/ch13-form-input-upload.md) · code: [`code/playwright-tests/tests/ch13-form-input-upload.spec.ts`](code/playwright-tests/tests/ch13-form-input-upload.spec.ts)
-14. Auto-waiting, xử lý bất đồng bộ, network
+14. ✅ Auto-waiting, xử lý bất đồng bộ, network — [`book/part4-playwright-basics/ch14-auto-waiting-network.md`](book/part4-playwright-basics/ch14-auto-waiting-network.md) · code: [`code/playwright-tests/tests/ch14-auto-waiting-network.spec.ts`](code/playwright-tests/tests/ch14-auto-waiting-network.spec.ts)
 15. Page Object Model (POM) — tổ chức code test dễ bảo trì
 16. Fixtures cơ bản, tái sử dụng logic test
 17. Debug: Trace Viewer, UI Mode, `--debug`, codegen

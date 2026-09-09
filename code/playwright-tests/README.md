@@ -30,6 +30,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `tests/ch11-login-test-cases.spec.ts` | 11 — tự động hoá đầy đủ TC-01→TC-10 (Chương 1) bằng locators/actions/assertions |
 | `tests/ch12-cau-truc-test.spec.ts` | 12 — `test.describe`, 4 loại hook, `test.step` |
 | `tests/ch13-form-input-upload.spec.ts` | 13 — text/textarea/select/checkbox/upload file (trang `/profile`) |
+| `tests/ch14-auto-waiting-network.spec.ts` | 14 — auto-waiting với mạng chậm, `waitForResponse`, giả lập lỗi server bằng `page.route` |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 

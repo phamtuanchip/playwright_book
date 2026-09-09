@@ -48,12 +48,22 @@ form.addEventListener("submit", async (event) => {
 
   const redirect = new URLSearchParams(window.location.search).get("redirect") || "/dashboard";
 
-  const res = await fetch("/api/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
-  });
-  const data = await res.json();
+  let data;
+  try {
+    const res = await fetch("/api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
+    });
+    // res.ok === false khi server trả lỗi (vd 500) — thân response khi đó thường KHÔNG
+    // phải JSON hợp lệ, nên phải kiểm tra res.ok TRƯỚC KHI gọi res.json(), nếu không
+    // res.json() sẽ ném lỗi parse, rơi thẳng xuống catch bên dưới.
+    if (!res.ok) throw new Error("http-error");
+    data = await res.json();
+  } catch {
+    serverError.textContent = "Có lỗi xảy ra, vui lòng thử lại.";
+    return;
+  }
 
   if (data.ok) {
     window.location.href = redirect;
