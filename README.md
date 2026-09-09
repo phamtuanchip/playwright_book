@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 24/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 25/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -52,7 +52,8 @@ playwright_book/
 │   ├── ch01-sdlc/, ch02-.../ ... ch06-.../   # Phần I-II: mỗi chương 1 thư mục độc lập
 │   ├── playwright-tests/      # Phần IV-VI: MỘT project Playwright chung, xây dần qua chương
 │   │                           # (tests/chXX-*.spec.ts) — xem lý do trong README của nó
-│   └── demo-app/               # Web app mẫu (từ Chương 9), tests/ ở trên chạy nhằm vào đây
+│   ├── demo-app/               # Web app mẫu (từ Chương 9), tests/ ở trên chạy nhằm vào đây
+│   └── component-testing/      # Chương 25: project React riêng biệt, minh hoạ component testing
 ├── tools/                     # Script build HTML (tools/build.js) + CSS (tools/style.css)
 ├── dist/                      # HTML đã build (commit sẵn) — chạy `npm run build` để sinh lại
 └── README.md                  # File kế hoạch này
@@ -96,7 +97,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 22. ✅ Authentication & storage state (test app có đăng nhập) — [`book/part5-playwright-advanced/ch22-auth-storage-state.md`](book/part5-playwright-advanced/ch22-auth-storage-state.md) · code: [`code/playwright-tests/global-setup.ts`](code/playwright-tests/global-setup.ts)
 23. ✅ Chạy song song, sharding, tối ưu tốc độ test suite — [`book/part5-playwright-advanced/ch23-song-song-sharding.md`](book/part5-playwright-advanced/ch23-song-song-sharding.md) · code: [`code/playwright-tests/tests/ch23-song-song-sharding.spec.ts`](code/playwright-tests/tests/ch23-song-song-sharding.spec.ts)
 24. ✅ Cross-browser testing & mobile emulation — [`book/part5-playwright-advanced/ch24-cross-browser-mobile.md`](book/part5-playwright-advanced/ch24-cross-browser-mobile.md) · code: [`code/playwright-tests/tests/ch24-cross-browser-mobile.spec.ts`](code/playwright-tests/tests/ch24-cross-browser-mobile.spec.ts)
-25. Component testing với Playwright
+25. ✅ Component testing với Playwright — [`book/part5-playwright-advanced/ch25-component-testing.md`](book/part5-playwright-advanced/ch25-component-testing.md) · code: [`code/component-testing/`](code/component-testing/)
 26. Custom fixtures nâng cao, viết plugin/reporter riêng
 
 ### Phần VI — Nâng cao: AI + MCP / Browser Automation
