@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 18/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 19/33 đã hoàn thành (xong Phần IV), đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -88,7 +88,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 16. ✅ Fixtures cơ bản, tái sử dụng logic test — [`book/part4-playwright-basics/ch16-fixtures-co-ban.md`](book/part4-playwright-basics/ch16-fixtures-co-ban.md) · code: [`code/playwright-tests/fixtures.ts`](code/playwright-tests/fixtures.ts)
 17. ✅ Debug: Trace Viewer, UI Mode, `--debug`, codegen — [`book/part4-playwright-basics/ch17-debug-trace-viewer.md`](book/part4-playwright-basics/ch17-debug-trace-viewer.md)
 18. ✅ Reporting: HTML reporter, tích hợp Allure — [`book/part4-playwright-basics/ch18-reporting.md`](book/part4-playwright-basics/ch18-reporting.md)
-19. CI/CD: chạy Playwright trên GitHub Actions
+19. ✅ CI/CD: chạy Playwright trên GitHub Actions — [`book/part4-playwright-basics/ch19-cicd-github-actions.md`](book/part4-playwright-basics/ch19-cicd-github-actions.md) · workflow: [`.github/workflows/playwright.yml`](.github/workflows/playwright.yml)
 
 ### Phần V — Playwright nâng cao
 20. API testing với `request` context (kết hợp UI + API test)
@@ -131,7 +131,8 @@ dụng đúng pipeline đã kiểm chứng.
 - [x] Viết xong Phần I (Chương 1–3: SDLC, các loại kiểm thử, test case/plan/bug report) + ví dụ
 - [x] Viết xong Phần II (Chương 4–6: PQA/FQA/TQA, automation QA, kỹ năng) + ví dụ
 - [x] Viết xong Phần III (Chương 7–9: cài đặt, khởi tạo project Playwright, demo app) + code chạy được
-- [ ] Viết Phần IV (Playwright cơ bản, Chương 10–19)
+- [x] Viết xong Phần IV (Chương 10–19: kiến trúc Playwright → locators → POM → fixtures → debug → reporting → CI/CD), 31 test pass, 2 bug thật tìm & sửa
+- [ ] Viết Phần V (Playwright nâng cao, Chương 20–26)
 - [ ] Viết Phần V (Playwright nâng cao, Chương 20–26)
 - [ ] Viết Phần VI (AI/MCP, Chương 27–30)
 - [ ] Viết Phụ lục A–C
