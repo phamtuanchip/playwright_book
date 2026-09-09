@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 21/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 22/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -93,7 +93,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 ### Phần V — Playwright nâng cao
 20. ✅ API testing với `request` context (kết hợp UI + API test) — [`book/part5-playwright-advanced/ch20-api-testing.md`](book/part5-playwright-advanced/ch20-api-testing.md) · code: [`code/playwright-tests/tests/ch20-api-testing.spec.ts`](code/playwright-tests/tests/ch20-api-testing.spec.ts)
 21. ✅ Visual testing / so sánh screenshot — [`book/part5-playwright-advanced/ch21-visual-testing.md`](book/part5-playwright-advanced/ch21-visual-testing.md) · code: [`code/playwright-tests/tests/ch21-visual-testing.spec.ts`](code/playwright-tests/tests/ch21-visual-testing.spec.ts)
-22. Authentication & storage state (test app có đăng nhập)
+22. ✅ Authentication & storage state (test app có đăng nhập) — [`book/part5-playwright-advanced/ch22-auth-storage-state.md`](book/part5-playwright-advanced/ch22-auth-storage-state.md) · code: [`code/playwright-tests/global-setup.ts`](code/playwright-tests/global-setup.ts)
 23. Chạy song song, sharding, tối ưu tốc độ test suite
 24. Cross-browser testing & mobile emulation
 25. Component testing với Playwright

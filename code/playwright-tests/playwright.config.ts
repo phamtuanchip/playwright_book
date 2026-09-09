@@ -17,6 +17,11 @@ export default defineConfig({
   // (ghi kết quả thô vào allure-results/, xem Chương 18 để biết cách sinh báo cáo HTML từ đó).
   reporter: [["html"], ["allure-playwright"]],
 
+  // Chương 22: chạy 1 lần trước MỌI test (không phải mỗi file) — đăng nhập qua API, lưu
+  // cookie session vào storageState.json để các test dùng `test.use({ storageState: ... })`
+  // tái sử dụng, không cần đăng nhập lại từ đầu.
+  globalSetup: "./global-setup.ts",
+
   use: {
     baseURL: "http://localhost:3000",
     trace: "on-first-retry",

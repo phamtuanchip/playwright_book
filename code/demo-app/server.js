@@ -12,6 +12,7 @@ const {
   destroySession,
   getProfile,
   updateProfile,
+  setFailedAttempts,
 } = require("./src/store");
 const { loginPage, dashboardPage, ordersPage, profilePage } = require("./src/views");
 
@@ -115,6 +116,16 @@ app.post("/api/profile", requireAuth, upload.single("avatar"), (req, res) => {
 // reset số lần sai) để mỗi lần chạy test không phụ thuộc kết quả lần chạy trước — xem Chương 22.
 app.post("/api/test/reset", (req, res) => {
   resetDemoUser();
+  res.json({ ok: true });
+});
+
+// Chỉ phục vụ mục đích test tự động: đặt trực tiếp số lần đăng nhập sai của tài khoản demo,
+// để test TC-07 không cần đăng nhập sai N-1 lần trước qua UI/API — seed thẳng trạng thái cần
+// test (Chương 22), đúng kỹ thuật đã hứa hẹn trong ghi chú của Chương 1.
+app.post("/api/test/seed-failed-attempts", (req, res) => {
+  const { email, count } = req.body || {};
+  const user = setFailedAttempts(email || "demo@example.com", count ?? 0);
+  if (!user) return res.status(404).json({ ok: false, message: "Không tìm thấy tài khoản" });
   res.json({ ok: true });
 });
 

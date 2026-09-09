@@ -35,6 +35,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `fixtures.ts` + `tests/ch16-fixtures-co-ban.spec.ts` | 16 — custom fixture `loggedInPage` (setup + teardown quanh `use()`) |
 | `tests/ch20-api-testing.spec.ts` | 20 — API test thuần qua `request`, và kỹ thuật `page.request` để đăng nhập nhanh trước khi test UI |
 | `tests/ch21-visual-testing.spec.ts` | 21 — `toHaveScreenshot()`; bị `test.skip` trên CI vì baseline tạo trên Windows (xem README này, mục dưới) |
+| `global-setup.ts` + `tests/ch22-auth-storage-state.spec.ts` | 22 — storage state (`storageState.json`) + endpoint seed `/api/test/seed-failed-attempts` cho TC-07 |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 

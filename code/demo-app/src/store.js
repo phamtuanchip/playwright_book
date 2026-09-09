@@ -66,6 +66,17 @@ function updateProfile(email, patch) {
   return updated;
 }
 
+// Chỉ dùng cho test tự động: đặt trực tiếp số lần đăng nhập sai của một tài khoản, để test
+// TC-07 (khoá tài khoản) không cần thực sự đăng nhập sai 4 lần trước đó qua UI/API — seed
+// thẳng trạng thái cần test. Xem Chương 22.
+function setFailedAttempts(email, count) {
+  const user = users.get(email);
+  if (!user) return null;
+  user.failedAttempts = count;
+  user.lockedUntil = null;
+  return user;
+}
+
 module.exports = {
   users,
   resetDemoUser,
@@ -74,4 +85,5 @@ module.exports = {
   destroySession,
   getProfile,
   updateProfile,
+  setFailedAttempts,
 };

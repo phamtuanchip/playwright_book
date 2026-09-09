@@ -27,6 +27,7 @@ báo `webServer` để Playwright tự khởi động app này trước khi ch�
 | `GET /profile` | Form hồ sơ: text input, textarea, dropdown, checkbox, upload file (Chương 13) |
 | `POST /api/profile` | API cập nhật hồ sơ (multipart/form-data, dùng `multer`) |
 | `POST /api/test/reset` | **Chỉ dùng cho test**: seed lại tài khoản demo (xoá lockout, reset số lần sai) — xem Chương 22 |
+| `POST /api/test/seed-failed-attempts` | **Chỉ dùng cho test**: đặt trực tiếp số lần đăng nhập sai (`{ email, count }`) — seed nhanh cho TC-07, không cần lặp UI/API N lần (Chương 22) |
 | `GET /healthz` | Endpoint Playwright dùng để biết server đã sẵn sàng |
 
 ## Vì sao có `/api/test/reset`?
