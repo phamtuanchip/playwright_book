@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 1/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 2/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -62,7 +62,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 
 ### Phần I — Nền tảng QA trong SDLC
 1. ✅ SDLC là gì? Vị trí của kiểm thử (Testing) trong vòng đời phát triển phần mềm — [`book/part1-qa-fundamentals/ch01-sdlc.md`](book/part1-qa-fundamentals/ch01-sdlc.md) · ví dụ: [`code/ch01-sdlc/`](code/ch01-sdlc/)
-2. Các loại kiểm thử: Manual vs Automation, Unit / Integration / E2E / Regression
+2. ✅ Các loại kiểm thử: Manual vs Automation, Unit / Integration / E2E / Regression — [`book/part1-qa-fundamentals/ch02-loai-kiem-thu.md`](book/part1-qa-fundamentals/ch02-loai-kiem-thu.md) · ví dụ: [`code/ch02-loai-kiem-thu/`](code/ch02-loai-kiem-thu/)
 3. Test case, test plan, bug report — những khái niệm cơ bản mọi QA cần biết
 
 ### Phần II — Vai trò QA & Automation QA
