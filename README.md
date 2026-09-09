@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 6/33 đã hoàn thành (xong Phần II), đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 7/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -71,7 +71,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 6. ✅ Kỹ năng & tư duy cần có của một Automation QA Engineer — [`book/part2-qa-roles/ch06-ky-nang-automation-qa.md`](book/part2-qa-roles/ch06-ky-nang-automation-qa.md) · ví dụ: [`code/ch06-ky-nang-automation-qa/`](code/ch06-ky-nang-automation-qa/)
 
 ### Phần III — Cài đặt môi trường
-7. Cài đặt Node.js, quản lý package (npm/pnpm), VS Code & extension hữu ích
+7. ✅ Cài đặt Node.js, quản lý package (npm/pnpm), VS Code & extension hữu ích — [`book/part3-setup/ch07-cai-dat-nodejs.md`](book/part3-setup/ch07-cai-dat-nodejs.md)
 8. Khởi tạo project Playwright (`npm init playwright@latest`), cấu trúc thư mục project
 9. Giới thiệu demo app dùng xuyên suốt sách
 
