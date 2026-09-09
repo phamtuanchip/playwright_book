@@ -13,7 +13,9 @@ export default defineConfig({
   workers: 1,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  reporter: "html",
+  // Chương 18: chạy CÙNG LÚC 2 reporter — "html" (đã dùng từ đầu) và "allure-playwright"
+  // (ghi kết quả thô vào allure-results/, xem Chương 18 để biết cách sinh báo cáo HTML từ đó).
+  reporter: [["html"], ["allure-playwright"]],
 
   use: {
     baseURL: "http://localhost:3000",

@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 17/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 18/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -87,7 +87,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 15. ✅ Page Object Model (POM) — tổ chức code test dễ bảo trì — [`book/part4-playwright-basics/ch15-page-object-model.md`](book/part4-playwright-basics/ch15-page-object-model.md) · code: [`code/playwright-tests/pages/`](code/playwright-tests/pages/)
 16. ✅ Fixtures cơ bản, tái sử dụng logic test — [`book/part4-playwright-basics/ch16-fixtures-co-ban.md`](book/part4-playwright-basics/ch16-fixtures-co-ban.md) · code: [`code/playwright-tests/fixtures.ts`](code/playwright-tests/fixtures.ts)
 17. ✅ Debug: Trace Viewer, UI Mode, `--debug`, codegen — [`book/part4-playwright-basics/ch17-debug-trace-viewer.md`](book/part4-playwright-basics/ch17-debug-trace-viewer.md)
-18. Reporting: HTML reporter, tích hợp Allure
+18. ✅ Reporting: HTML reporter, tích hợp Allure — [`book/part4-playwright-basics/ch18-reporting.md`](book/part4-playwright-basics/ch18-reporting.md)
 19. CI/CD: chạy Playwright trên GitHub Actions
 
 ### Phần V — Playwright nâng cao
