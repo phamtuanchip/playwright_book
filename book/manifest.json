@@ -1,0 +1,81 @@
+{
+  "title": "Automation Testing với Playwright",
+  "subtitle": "Từ khái niệm QA cơ bản đến automation QA và nâng cao với Playwright + AI/MCP",
+  "parts": [
+    {
+      "id": "part1-qa-fundamentals",
+      "title": "Phần I — Nền tảng QA trong SDLC",
+      "chapters": [
+        { "num": 1, "slug": "ch01-sdlc", "title": "SDLC là gì? Vị trí của kiểm thử (Testing) trong vòng đời phát triển phần mềm" },
+        { "num": 2, "slug": "ch02-loai-kiem-thu", "title": "Các loại kiểm thử: Manual vs Automation, Unit / Integration / E2E / Regression" },
+        { "num": 3, "slug": "ch03-test-case-plan-bug", "title": "Test case, test plan, bug report — những khái niệm cơ bản mọi QA cần biết" }
+      ]
+    },
+    {
+      "id": "part2-qa-roles",
+      "title": "Phần II — Vai trò QA & Automation QA",
+      "chapters": [
+        { "num": 4, "slug": "ch04-pqa-fqa-tqa", "title": "PQA (Product QA), FQA (Functional QA), TQA (Test/Technical QA) — phân biệt & trách nhiệm" },
+        { "num": 5, "slug": "ch05-automation-qa-la-gi", "title": "Automation QA là gì? Khi nào nên tự động hoá, khi nào không" },
+        { "num": 6, "slug": "ch06-ky-nang-automation-qa", "title": "Kỹ năng & tư duy cần có của một Automation QA Engineer" }
+      ]
+    },
+    {
+      "id": "part3-setup",
+      "title": "Phần III — Cài đặt môi trường",
+      "chapters": [
+        { "num": 7, "slug": "ch07-cai-dat-nodejs", "title": "Cài đặt Node.js, quản lý package (npm/pnpm), VS Code & extension hữu ích" },
+        { "num": 8, "slug": "ch08-khoi-tao-project-playwright", "title": "Khởi tạo project Playwright, cấu trúc thư mục project" },
+        { "num": 9, "slug": "ch09-demo-app", "title": "Giới thiệu demo app dùng xuyên suốt sách" }
+      ]
+    },
+    {
+      "id": "part4-playwright-basics",
+      "title": "Phần IV — Playwright cơ bản",
+      "chapters": [
+        { "num": 10, "slug": "ch10-playwright-la-gi", "title": "Playwright là gì? Kiến trúc, so sánh nhanh với Selenium/Cypress" },
+        { "num": 11, "slug": "ch11-locators-actions-assertions", "title": "Test đầu tiên: Locators, Actions, Assertions" },
+        { "num": 12, "slug": "ch12-cau-truc-test", "title": "Cấu trúc test: test, describe, hooks (beforeEach/afterEach)" },
+        { "num": 13, "slug": "ch13-form-input-upload", "title": "Làm việc với form, input, dropdown, upload file" },
+        { "num": 14, "slug": "ch14-auto-waiting-network", "title": "Auto-waiting, xử lý bất đồng bộ, network" },
+        { "num": 15, "slug": "ch15-page-object-model", "title": "Page Object Model (POM) — tổ chức code test dễ bảo trì" },
+        { "num": 16, "slug": "ch16-fixtures-co-ban", "title": "Fixtures cơ bản, tái sử dụng logic test" },
+        { "num": 17, "slug": "ch17-debug-trace-viewer", "title": "Debug: Trace Viewer, UI Mode, --debug, codegen" },
+        { "num": 18, "slug": "ch18-reporting", "title": "Reporting: HTML reporter, tích hợp Allure" },
+        { "num": 19, "slug": "ch19-cicd-github-actions", "title": "CI/CD: chạy Playwright trên GitHub Actions" }
+      ]
+    },
+    {
+      "id": "part5-playwright-advanced",
+      "title": "Phần V — Playwright nâng cao",
+      "chapters": [
+        { "num": 20, "slug": "ch20-api-testing", "title": "API testing với request context (kết hợp UI + API test)" },
+        { "num": 21, "slug": "ch21-visual-testing", "title": "Visual testing / so sánh screenshot" },
+        { "num": 22, "slug": "ch22-auth-storage-state", "title": "Authentication & storage state (test app có đăng nhập)" },
+        { "num": 23, "slug": "ch23-song-song-sharding", "title": "Chạy song song, sharding, tối ưu tốc độ test suite" },
+        { "num": 24, "slug": "ch24-cross-browser-mobile", "title": "Cross-browser testing & mobile emulation" },
+        { "num": 25, "slug": "ch25-component-testing", "title": "Component testing với Playwright" },
+        { "num": 26, "slug": "ch26-custom-fixtures-nang-cao", "title": "Custom fixtures nâng cao, viết plugin/reporter riêng" }
+      ]
+    },
+    {
+      "id": "part6-ai-mcp",
+      "title": "Phần VI — Nâng cao: AI + MCP / Browser Automation",
+      "chapters": [
+        { "num": 27, "slug": "ch27-mcp-la-gi", "title": "Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test" },
+        { "num": 28, "slug": "ch28-playwright-mcp-server", "title": "Playwright MCP server — để AI agent điều khiển trình duyệt" },
+        { "num": 29, "slug": "ch29-ai-sinh-test-case", "title": "Kết hợp AI sinh test case, self-healing test khi UI thay đổi" },
+        { "num": 30, "slug": "ch30-case-study", "title": "Case study thực tế: xây pipeline test bán tự động với AI + Playwright" }
+      ]
+    },
+    {
+      "id": "part7-appendix",
+      "title": "Phụ lục",
+      "chapters": [
+        { "num": 31, "label": "Phụ lục A", "slug": "appendix-a-best-practices", "title": "Best practices & checklist automation test" },
+        { "num": 32, "label": "Phụ lục B", "slug": "appendix-b-loi-thuong-gap", "title": "Các lỗi thường gặp và cách xử lý (troubleshooting)" },
+        { "num": 33, "label": "Phụ lục C", "slug": "appendix-c-tai-lieu-tham-khao", "title": "Tài liệu tham khảo & cộng đồng" }
+      ]
+    }
+  ]
+}

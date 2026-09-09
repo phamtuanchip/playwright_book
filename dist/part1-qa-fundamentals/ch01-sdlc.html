@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>1. SDLC là gì? Vị trí của kiểm thử (Testing) trong vòng đời phát triển phần mềm — Automation Testing với Playwright</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js"></script>
+</head>
+<body>
+<button class="nav-toggle" id="navToggle" aria-label="Mở/đóng mục lục">☰</button>
+<nav class="sidebar"><div class="sidebar-title"><a href="../index.html">Automation Testing với Playwright</a></div><div class="sidebar-part"><div class="sidebar-part-title">Phần I — Nền tảng QA trong SDLC</div><ul><li class="active"><a href="./ch01-sdlc.html">1. SDLC là gì? Vị trí của kiểm thử (Testing) trong vòng đời phát triển phần mềm</a></li><li class="planned"><a href="./ch02-loai-kiem-thu.html">2. Các loại kiểm thử: Manual vs Automation, Unit / Integration / E2E / Regression</a></li><li class="planned"><a href="./ch03-test-case-plan-bug.html">3. Test case, test plan, bug report — những khái niệm cơ bản mọi QA cần biết</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần II — Vai trò QA &amp; Automation QA</div><ul><li class="planned"><a href="../part2-qa-roles/ch04-pqa-fqa-tqa.html">4. PQA (Product QA), FQA (Functional QA), TQA (Test/Technical QA) — phân biệt &amp; trách nhiệm</a></li><li class="planned"><a href="../part2-qa-roles/ch05-automation-qa-la-gi.html">5. Automation QA là gì? Khi nào nên tự động hoá, khi nào không</a></li><li class="planned"><a href="../part2-qa-roles/ch06-ky-nang-automation-qa.html">6. Kỹ năng &amp; tư duy cần có của một Automation QA Engineer</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần III — Cài đặt môi trường</div><ul><li class="planned"><a href="../part3-setup/ch07-cai-dat-nodejs.html">7. Cài đặt Node.js, quản lý package (npm/pnpm), VS Code &amp; extension hữu ích</a></li><li class="planned"><a href="../part3-setup/ch08-khoi-tao-project-playwright.html">8. Khởi tạo project Playwright, cấu trúc thư mục project</a></li><li class="planned"><a href="../part3-setup/ch09-demo-app.html">9. Giới thiệu demo app dùng xuyên suốt sách</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần IV — Playwright cơ bản</div><ul><li class="planned"><a href="../part4-playwright-basics/ch10-playwright-la-gi.html">10. Playwright là gì? Kiến trúc, so sánh nhanh với Selenium/Cypress</a></li><li class="planned"><a href="../part4-playwright-basics/ch11-locators-actions-assertions.html">11. Test đầu tiên: Locators, Actions, Assertions</a></li><li class="planned"><a href="../part4-playwright-basics/ch12-cau-truc-test.html">12. Cấu trúc test: test, describe, hooks (beforeEach/afterEach)</a></li><li class="planned"><a href="../part4-playwright-basics/ch13-form-input-upload.html">13. Làm việc với form, input, dropdown, upload file</a></li><li class="planned"><a href="../part4-playwright-basics/ch14-auto-waiting-network.html">14. Auto-waiting, xử lý bất đồng bộ, network</a></li><li class="planned"><a href="../part4-playwright-basics/ch15-page-object-model.html">15. Page Object Model (POM) — tổ chức code test dễ bảo trì</a></li><li class="planned"><a href="../part4-playwright-basics/ch16-fixtures-co-ban.html">16. Fixtures cơ bản, tái sử dụng logic test</a></li><li class="planned"><a href="../part4-playwright-basics/ch17-debug-trace-viewer.html">17. Debug: Trace Viewer, UI Mode, --debug, codegen</a></li><li class="planned"><a href="../part4-playwright-basics/ch18-reporting.html">18. Reporting: HTML reporter, tích hợp Allure</a></li><li class="planned"><a href="../part4-playwright-basics/ch19-cicd-github-actions.html">19. CI/CD: chạy Playwright trên GitHub Actions</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần V — Playwright nâng cao</div><ul><li class="planned"><a href="../part5-playwright-advanced/ch20-api-testing.html">20. API testing với request context (kết hợp UI + API test)</a></li><li class="planned"><a href="../part5-playwright-advanced/ch21-visual-testing.html">21. Visual testing / so sánh screenshot</a></li><li class="planned"><a href="../part5-playwright-advanced/ch22-auth-storage-state.html">22. Authentication &amp; storage state (test app có đăng nhập)</a></li><li class="planned"><a href="../part5-playwright-advanced/ch23-song-song-sharding.html">23. Chạy song song, sharding, tối ưu tốc độ test suite</a></li><li class="planned"><a href="../part5-playwright-advanced/ch24-cross-browser-mobile.html">24. Cross-browser testing &amp; mobile emulation</a></li><li class="planned"><a href="../part5-playwright-advanced/ch25-component-testing.html">25. Component testing với Playwright</a></li><li class="planned"><a href="../part5-playwright-advanced/ch26-custom-fixtures-nang-cao.html">26. Custom fixtures nâng cao, viết plugin/reporter riêng</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phần VI — Nâng cao: AI + MCP / Browser Automation</div><ul><li class="planned"><a href="../part6-ai-mcp/ch27-mcp-la-gi.html">27. Model Context Protocol (MCP) là gì, vì sao liên quan đến automation test</a></li><li class="planned"><a href="../part6-ai-mcp/ch28-playwright-mcp-server.html">28. Playwright MCP server — để AI agent điều khiển trình duyệt</a></li><li class="planned"><a href="../part6-ai-mcp/ch29-ai-sinh-test-case.html">29. Kết hợp AI sinh test case, self-healing test khi UI thay đổi</a></li><li class="planned"><a href="../part6-ai-mcp/ch30-case-study.html">30. Case study thực tế: xây pipeline test bán tự động với AI + Playwright</a></li></ul></div><div class="sidebar-part"><div class="sidebar-part-title">Phụ lục</div><ul><li class="planned"><a href="../part7-appendix/appendix-a-best-practices.html">Phụ lục A — Best practices &amp; checklist automation test</a></li><li class="planned"><a href="../part7-appendix/appendix-b-loi-thuong-gap.html">Phụ lục B — Các lỗi thường gặp và cách xử lý (troubleshooting)</a></li><li class="planned"><a href="../part7-appendix/appendix-c-tai-lieu-tham-khao.html">Phụ lục C — Tài liệu tham khảo &amp; cộng đồng</a></li></ul></div></nav>
+<main class="content">
+<article>
+<h1>Chương 1: SDLC là gì? Vị trí của kiểm thử trong vòng đời phát triển phần mềm</h1>
+<h2>Mục tiêu học</h2>
+<ul>
+<li>Gọi tên và giải thích được 6 giai đoạn cơ bản của SDLC.</li>
+<li>Phân biệt cách testing được lồng vào SDLC ở mô hình Waterfall so với Agile/DevOps.</li>
+<li>Giải thích được nguyên lý &quot;Cost of Defect&quot; — vì sao phát hiện lỗi càng trễ càng tốn kém.</li>
+<li>Áp dụng được tư duy &quot;shift-left testing&quot; vào một tính năng cụ thể.</li>
+</ul>
+<blockquote>
+<p>Ví dụ mẫu: <code>code/ch01-sdlc/test-case-list-login.md</code> — một bộ test case hoàn chỉnh cho tính năng đăng nhập, viết ra <em>trước khi</em> code được viết (đúng tinh thần shift-left ở mục 1.3). Đọc song song với mục 1.4 để thấy rõ QA tham gia sớm như thế nào trong thực tế.</p>
+</blockquote>
+<h2>1.1. Vì sao lập trình viên cần hiểu SDLC?</h2>
+<p>Nếu bạn đã biết lập trình, bạn quen với việc viết code, chạy thử, commit, và push. Nhưng viết một tính năng chạy được chỉ là một mắt xích nhỏ trong một quy trình lớn hơn nhiều — quy trình đó được gọi là <strong>SDLC (Software Development Life Cycle — Vòng đời phát triển phần mềm)</strong>.</p>
+<p>Hiểu SDLC quan trọng với người làm automation test vì một lý do đơn giản: <strong>test không phải là một bước làm sau cùng</strong>, mà là một hoạt động cần được lồng vào <em>mọi</em> giai đoạn của SDLC. Nếu không biết SDLC vận hành ra sao, bạn sẽ không biết nên viết test gì, viết lúc nào, và test đó phục vụ mục đích gì trong bức tranh chung.</p>
+<h2>1.2. SDLC là gì?</h2>
+<p><strong>SDLC</strong> là tập hợp các giai đoạn (phases) mà một đội phát triển phần mềm đi qua để biến một ý tưởng/yêu cầu thành sản phẩm hoạt động, được vận hành, và được bảo trì:</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart LR
+    A[Requirement&lt;br/&gt;Phân tích yêu cầu] --&gt; B[Design&lt;br/&gt;Thiết kế]
+    B --&gt; C[Development&lt;br/&gt;Lập trình]
+    C --&gt; D[Testing&lt;br/&gt;Kiểm thử]
+    D --&gt; E[Deployment&lt;br/&gt;Triển khai]
+    E --&gt; F[Maintenance&lt;br/&gt;Bảo trì]
+    F -.thay đổi/yêu cầu mới.-&gt; A
+</pre></div>
+<p>Đây là mô hình khái niệm chung. Trên thực tế, thứ tự và cách các giai đoạn này lặp lại phụ thuộc vào <strong>mô hình phát triển (SDLC model)</strong> mà đội ngũ áp dụng.</p>
+<h3>Các mô hình SDLC phổ biến</h3>
+<table>
+<thead>
+<tr>
+<th>Mô hình</th>
+<th>Đặc điểm</th>
+<th>Testing diễn ra khi nào</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Waterfall</strong></td>
+<td>Các giai đoạn tuần tự, giai đoạn sau chỉ bắt đầu khi giai đoạn trước hoàn tất</td>
+<td>Chỉ ở cuối, sau khi code xong toàn bộ — phát hiện lỗi rất trễ</td>
+</tr>
+<tr>
+<td><strong>Agile / Scrum</strong></td>
+<td>Chia nhỏ thành các <strong>sprint</strong> (thường 1–2 tuần), mỗi sprint đều có đủ analysis → design → dev → test</td>
+<td>Testing diễn ra <strong>trong từng sprint</strong>, song song với development</td>
+</tr>
+<tr>
+<td><strong>DevOps / CI-CD</strong></td>
+<td>Tích hợp và triển khai liên tục, tự động hoá tối đa</td>
+<td>Testing (đặc biệt automation test) chạy <strong>liên tục</strong>, tự động, mỗi khi có code mới</td>
+</tr>
+</tbody>
+</table>
+<p>Phần lớn các công ty hiện nay dùng Agile kết hợp DevOps — đây cũng là bối cảnh mà automation testing (chủ đề chính của sách này) phát huy giá trị lớn nhất, vì test cần chạy nhanh và lặp lại liên tục.</p>
+<h2>1.3. Vị trí của Testing trong SDLC</h2>
+<h3>Trong mô hình Waterfall truyền thống</h3>
+<p>Testing là một giai đoạn <strong>riêng biệt, nằm cuối</strong>:</p>
+<pre><code>Requirement → Design → Development → [Testing] → Deployment → Maintenance
+</code></pre>
+<p>Vấn đề: nếu một lỗi đến từ việc hiểu sai yêu cầu ở bước 1, thì phải đến tận bước 4 nó mới bị phát hiện — lúc đó, sửa lỗi rất tốn kém vì code đã được xây dựng dựa trên hiểu sai đó.</p>
+<h3>Trong Agile/DevOps hiện đại: Shift-Left Testing</h3>
+<p>Tư duy hiện đại gọi là <strong>&quot;shift-left&quot;</strong> — dịch hoạt động testing về <em>sớm hơn</em> trong vòng đời, thay vì dồn hết vào cuối:</p>
+<div class="mermaid-wrap"><pre class="mermaid">
+flowchart TD
+    R[Requirement] --&gt;|QA review yêu cầu,&lt;br/&gt;viết test case sớm| R2[ ]
+    D[Design] --&gt;|QA review thiết kế,&lt;br/&gt;phát hiện case thiếu| D2[ ]
+    Dev[Development] --&gt;|Unit test đi cùng code,&lt;br/&gt;QA test song song| Dev2[ ]
+    T[Testing] --&gt;|Integration/E2E/regression test&lt;br/&gt;tự động hoá| T2[ ]
+    Dep[Deployment] --&gt;|Smoke test tự động&lt;br/&gt;sau khi deploy| Dep2[ ]
+    M[Maintenance] --&gt;|Regression suite chạy định kỳ| M2[ ]
+
+    style R2 fill:none,stroke:none
+    style D2 fill:none,stroke:none
+    style Dev2 fill:none,stroke:none
+    style T2 fill:none,stroke:none
+    style Dep2 fill:none,stroke:none
+    style M2 fill:none,stroke:none
+</pre></div>
+<p>Testing không còn là một &quot;cổng chặn&quot; ở cuối, mà là hoạt động <strong>xuyên suốt</strong>.</p>
+<h3>Vì sao phát hiện lỗi càng trễ càng tốn kém?</h3>
+<p>Đây là nguyên lý kinh điển trong QA, thường gọi là <strong>&quot;Cost of Defect&quot;</strong>: chi phí sửa một lỗi tăng theo cấp số nhân tuỳ vào giai đoạn nó bị phát hiện.</p>
+<table>
+<thead>
+<tr>
+<th>Giai đoạn phát hiện lỗi</th>
+<th>Chi phí sửa (tương đối)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lúc phân tích yêu cầu</td>
+<td>1x</td>
+</tr>
+<tr>
+<td>Lúc thiết kế</td>
+<td>~5x</td>
+</tr>
+<tr>
+<td>Lúc lập trình</td>
+<td>~10x</td>
+</tr>
+<tr>
+<td>Lúc testing</td>
+<td>~15–40x</td>
+</tr>
+<tr>
+<td>Sau khi đã lên production</td>
+<td>~30–100x</td>
+</tr>
+</tbody>
+</table>
+<p>Đây chính là lý do automation test — vốn có thể chạy lại nhanh, thường xuyên, ngay khi có code mới — trở thành công cụ quan trọng để phát hiện lỗi sớm nhất có thể, thay vì đợi đến cuối sprint hay cuối release.</p>
+<h2>1.4. Ví dụ minh hoạ: tính năng &quot;Đăng nhập&quot; đi qua SDLC</h2>
+<p>Giả sử team đang xây một tính năng đăng nhập cho web app. Vai trò QA xuất hiện ở từng bước như sau:</p>
+<ol>
+<li><strong>Requirement:</strong> QA đọc yêu cầu &quot;Người dùng đăng nhập bằng email + password&quot;. QA đặt câu hỏi: Nếu sai password 5 lần thì sao? Có giới hạn độ dài password không? → giúp làm rõ yêu cầu <em>trước khi</em> code được viết.</li>
+<li><strong>Design:</strong> QA xem thiết kế API <code>/login</code>, thiết kế UI form đăng nhập, phát hiện thiếu case &quot;email không tồn tại&quot; trong flow.</li>
+<li><strong>Development:</strong> Dev viết unit test cho hàm validate email. QA chuẩn bị sẵn bộ test case (xem <code>code/ch01-sdlc/test-case-list-login.md</code>) song song với lúc dev code.</li>
+<li><strong>Testing:</strong> QA (hoặc automation test bằng Playwright — nội dung chính từ Phần IV trở đi) chạy các kịch bản trong bộ test case đó: đăng nhập đúng, đăng nhập sai password, để trống field, v.v.</li>
+<li><strong>Deployment:</strong> Một smoke test tự động (ví dụ 1 test Playwright đơn giản: &quot;đăng nhập thành công với tài khoản demo&quot;) chạy ngay sau khi deploy để đảm bảo tính năng không bị vỡ trên production.</li>
+<li><strong>Maintenance:</strong> Vài tuần sau, team sửa lại UI trang login. Bộ regression test tự động (đã viết bằng Playwright) chạy lại toàn bộ để đảm bảo không có gì bị hỏng do thay đổi này.</li>
+</ol>
+<p>Ở bước 4 và 6, chính là nơi automation testing — chủ đề toàn bộ cuốn sách này — đóng vai trò lớn nhất.</p>
+<p><strong>Xem ví dụ chi tiết:</strong> <code>code/ch01-sdlc/test-case-list-login.md</code> là bộ test case thật, viết theo đúng format một QA sẽ dùng trong công việc (ID, tiền điều kiện, các bước, kết quả mong đợi) — đây chính là &quot;sản phẩm đầu ra&quot; của bước Requirement/Development ở trên, và là input trực tiếp để viết automation test bằng Playwright sau này (Phần IV).</p>
+<h2>Bài tập</h2>
+<ol>
+<li>Chọn một tính năng bất kỳ mà bạn từng code (ví dụ: form đăng ký, giỏ hàng, tìm kiếm...).</li>
+<li>Liệt kê 6 giai đoạn SDLC (Requirement → Maintenance) áp dụng cho tính năng đó.</li>
+<li>Với mỗi giai đoạn, viết ra: &quot;Nếu có QA tham gia ở đây, họ sẽ làm gì và có thể phát hiện lỗi gì?&quot;</li>
+<li>Tham khảo format ở <code>code/ch01-sdlc/test-case-list-login.md</code>, tự viết một bộ test case tương tự (tối thiểu 5 test case) cho tính năng bạn đã chọn.</li>
+<li>Đánh dấu giai đoạn nào theo bạn là <strong>quá trễ</strong> để phát hiện lỗi nếu chỉ test ở đó — so sánh với nguyên lý &quot;Cost of Defect&quot; ở mục 1.3.</li>
+</ol>
+<h2>Lỗi thường gặp</h2>
+<ul>
+<li><strong>Coi testing là việc &quot;của QA&quot; xảy ra sau khi dev code xong</strong>: đây chính là tư duy Waterfall lỗi thời. Trong Agile/DevOps, QA tham gia từ bước Requirement, không đợi đến khi có build để test.</li>
+<li><strong>Không viết test case trước, chỉ &quot;test tay theo cảm tính&quot;</strong>: dẫn đến bỏ sót case (ví dụ quên test &quot;để trống field&quot;, &quot;sai định dạng email&quot;). Luôn có một danh sách test case tường minh, dù ngắn, trước khi bắt đầu test — kể cả automation test.</li>
+<li><strong>Chỉ chạy test một lần lúc release, không chạy lại (regression) sau mỗi thay đổi</strong>: đây là lý do chính khiến automation test trở nên cần thiết — chạy tay lại toàn bộ test case sau mỗi thay đổi nhỏ là không khả thi về thời gian.</li>
+</ul>
+<h2>Tóm tắt &amp; tiếp theo</h2>
+<ul>
+<li>SDLC là vòng đời phát triển phần mềm gồm các giai đoạn: Requirement, Design, Development, Testing, Deployment, Maintenance.</li>
+<li>Có nhiều mô hình SDLC (Waterfall, Agile, DevOps); cách testing được lồng vào khác nhau ở mỗi mô hình.</li>
+<li>Xu hướng hiện đại là <strong>shift-left testing</strong>: đưa testing vào càng sớm càng tốt, xuyên suốt vòng đời thay vì chỉ ở cuối.</li>
+<li>Lỗi phát hiện càng trễ, chi phí sửa càng cao — đây là động lực chính cho automation testing.</li>
+</ul>
+<p>Chương 2 sẽ đi sâu vào các <strong>loại kiểm thử</strong> (Manual vs Automation, Unit/Integration/E2E/Regression) — nền tảng để hiểu automation test (bằng Playwright) nên thay thế và bổ sung cho manual test ở những điểm nào.</p>
+
+</article>
+<div class="prev-next"><span></span><a class="next" href="./ch02-loai-kiem-thu.html">2. Các loại kiểm thử: Manual vs Automation, Unit / Integration / E2E / Regression &rarr;</a></div>
+</main>
+<script>
+document.getElementById('navToggle').addEventListener('click', function () {
+  document.querySelector('.sidebar').classList.toggle('open');
+});
+
+if (window.hljs) { hljs.highlightAll(); }
+
+if (window.mermaid) {
+  mermaid.initialize({ startOnLoad: false, theme: 'default', securityLevel: 'loose' });
+  mermaid.run({ querySelector: '.mermaid' }).then(function () {
+    document.querySelectorAll('.mermaid-wrap').forEach(function (wrap) {
+      var svg = wrap.querySelector('svg');
+      if (!svg || !window.svgPanZoom) return;
+      // Give the SVG concrete pixel dimensions (not "100%") before handing it to
+      // svg-pan-zoom: percentage sizing lets the browser's own preserveAspectRatio
+      // scaling stack on top of svg-pan-zoom's transform, which throws its fit/center
+      // math off by the extra scale factor.
+      svg.style.maxWidth = 'none';
+      svg.setAttribute('width', wrap.clientWidth);
+      svg.setAttribute('height', wrap.clientHeight);
+      var pz = svgPanZoom(svg, {
+        zoomEnabled: true,
+        controlIconsEnabled: true,
+        fit: true,
+        center: true,
+        minZoom: 0.3,
+        maxZoom: 10
+      });
+    });
+  });
+}
+</script>
+</body>
+</html>

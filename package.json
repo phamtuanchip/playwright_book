@@ -1,0 +1,16 @@
+{
+  "name": "playwright_book",
+  "version": "1.0.0",
+  "description": "Sách automation testing với Playwright bằng tiếng Việt, từ khái niệm QA cơ bản trong SDLC đến automation QA và Playwright nâng cao (kèm AI/MCP), có code mẫu chạy được cho từng chương.",
+  "main": "index.js",
+  "scripts": {
+    "build": "node tools/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "markdown-it": "^15.0.1"
+  }
+}
