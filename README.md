@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 7/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 8/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -48,8 +48,11 @@ playwright_book/
 │   ├── part5-playwright-advanced/# Chương 20-26
 │   ├── part6-ai-mcp/             # Chương 27-30
 │   └── part7-appendix/           # Phụ lục A-C
-├── code/                      # Ví dụ/code mẫu — mỗi chương có thư mục riêng, chạy độc lập
-│   └── ch01-sdlc/, ch11-locators-actions-assertions/, ...
+├── code/                      # Ví dụ/code mẫu
+│   ├── ch01-sdlc/, ch02-.../ ... ch06-.../   # Phần I-II: mỗi chương 1 thư mục độc lập
+│   ├── playwright-tests/      # Phần IV-VI: MỘT project Playwright chung, xây dần qua chương
+│   │                           # (tests/chXX-*.spec.ts) — xem lý do trong README của nó
+│   └── demo-app/               # Web app mẫu (từ Chương 9), tests/ ở trên chạy nhằm vào đây
 ├── tools/                     # Script build HTML (tools/build.js) + CSS (tools/style.css)
 ├── dist/                      # HTML đã build (commit sẵn) — chạy `npm run build` để sinh lại
 └── README.md                  # File kế hoạch này
@@ -72,7 +75,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 
 ### Phần III — Cài đặt môi trường
 7. ✅ Cài đặt Node.js, quản lý package (npm/pnpm), VS Code & extension hữu ích — [`book/part3-setup/ch07-cai-dat-nodejs.md`](book/part3-setup/ch07-cai-dat-nodejs.md)
-8. Khởi tạo project Playwright (`npm init playwright@latest`), cấu trúc thư mục project
+8. ✅ Khởi tạo project Playwright (`npm init playwright@latest`), cấu trúc thư mục project — [`book/part3-setup/ch08-khoi-tao-project-playwright.md`](book/part3-setup/ch08-khoi-tao-project-playwright.md) · project: [`code/playwright-tests/`](code/playwright-tests/)
 9. Giới thiệu demo app dùng xuyên suốt sách
 
 ### Phần IV — Playwright cơ bản
@@ -144,3 +147,7 @@ dụng đúng pipeline đã kiểm chứng.
 - **Ngôn ngữ code mẫu Playwright**: TypeScript, từ Chương 10 trở đi.
 - **Ví dụ cho chương thuần khái niệm**: dùng artifact QA thật (test case, test plan...) thay code —
   xem `code/ch01-sdlc/`.
+- **Một project Playwright chung cho Phần IV-VI** (`code/playwright-tests/`), không tách mỗi chương
+  một project riêng như Phần I-II — vì các test đều nhằm vào cùng một demo app (`code/demo-app/`)
+  và kỹ thuật học chương trước (POM, fixtures...) được tái sử dụng ở chương sau, đúng cách một
+  project Playwright thật vận hành. Xem lý do đầy đủ trong README của `code/playwright-tests/`.

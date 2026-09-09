@@ -1,0 +1,17 @@
+{
+  "name": "playwright-tests",
+  "version": "1.0.0",
+  "description": "Bo test Playwright dung xuyen suot Phan IV-VI cua sach, chay tren demo app o ../demo-app.",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}
