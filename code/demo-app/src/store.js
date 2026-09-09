@@ -77,6 +77,15 @@ function setFailedAttempts(email, count) {
   return user;
 }
 
+// Chỉ dùng cho test tự động: tạo một tài khoản MỚI, độc lập với tài khoản demo chung — nền
+// tảng để chạy test song song an toàn (mỗi worker seed tài khoản riêng, không đụng tài khoản
+// của worker khác). Xem Chương 23.
+function createUser(email, password) {
+  const user = { email, password, failedAttempts: 0, lockedUntil: null };
+  users.set(email, user);
+  return user;
+}
+
 module.exports = {
   users,
   resetDemoUser,
@@ -86,4 +95,5 @@ module.exports = {
   getProfile,
   updateProfile,
   setFailedAttempts,
+  createUser,
 };

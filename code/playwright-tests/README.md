@@ -36,6 +36,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `tests/ch20-api-testing.spec.ts` | 20 — API test thuần qua `request`, và kỹ thuật `page.request` để đăng nhập nhanh trước khi test UI |
 | `tests/ch21-visual-testing.spec.ts` | 21 — `toHaveScreenshot()`; bị `test.skip` trên CI vì baseline tạo trên Windows (xem README này, mục dưới) |
 | `global-setup.ts` + `tests/ch22-auth-storage-state.spec.ts` | 22 — storage state (`storageState.json`) + endpoint seed `/api/test/seed-failed-attempts` cho TC-07 |
+| `tests/ch23-song-song-sharding.spec.ts` | 23 — chạy song song AN TOÀN (mỗi worker 1 tài khoản riêng qua `/api/test/create-user`), kiểm chứng thật với `--workers=4` |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 

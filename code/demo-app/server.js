@@ -13,6 +13,7 @@ const {
   getProfile,
   updateProfile,
   setFailedAttempts,
+  createUser,
 } = require("./src/store");
 const { loginPage, dashboardPage, ordersPage, profilePage } = require("./src/views");
 
@@ -126,6 +127,17 @@ app.post("/api/test/seed-failed-attempts", (req, res) => {
   const { email, count } = req.body || {};
   const user = setFailedAttempts(email || "demo@example.com", count ?? 0);
   if (!user) return res.status(404).json({ ok: false, message: "Không tìm thấy tài khoản" });
+  res.json({ ok: true });
+});
+
+// Chỉ phục vụ mục đích test tự động: tạo tài khoản MỚI, độc lập với tài khoản demo chung —
+// dùng để mỗi worker chạy song song (Chương 23) có tài khoản riêng, không đụng độ nhau.
+app.post("/api/test/create-user", (req, res) => {
+  const { email, password } = req.body || {};
+  if (!email || !password) {
+    return res.status(400).json({ ok: false, message: "Thiếu email hoặc password" });
+  }
+  createUser(email, password);
   res.json({ ok: true });
 });
 
