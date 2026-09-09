@@ -56,6 +56,10 @@ jobs:
         working-directory: code/playwright-tests
         run: npx playwright install --with-deps chromium
 
+      - name: Type-check
+        working-directory: code/playwright-tests
+        run: npm run typecheck
+
       - name: Run Playwright tests
         working-directory: code/playwright-tests
         run: npm test
@@ -82,6 +86,10 @@ jobs:
   cần trên máy Windows/macOS cá nhân.
 - **`if: always()`** ở bước upload — chạy dù bước trước đó pass hay fail, để **luôn** có báo cáo
   tải về xem, đặc biệt quan trọng khi test fail.
+- **`npm run typecheck`** (bổ sung sau khi rà soát lại sách ở Chương 30, dùng `tsconfig.json` —
+  xem lại Chương 8) — chạy `tsc --noEmit` trước khi chạy test thật, bắt lỗi type (ví dụ gọi sai
+  tham số một hàm) **nhanh hơn** nhiều so với để lỗi đó gây fail một test cụ thể rồi mới đi tìm
+  nguyên nhân.
 
 ## 19.3. `webServer` hoạt động thế nào trên CI?
 

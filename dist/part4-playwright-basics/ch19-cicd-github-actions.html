@@ -68,6 +68,10 @@ jobs:
         working-directory: code/playwright-tests
         run: npx playwright install --with-deps chromium
 
+      - name: Type-check
+        working-directory: code/playwright-tests
+        run: npm run typecheck
+
       - name: Run Playwright tests
         working-directory: code/playwright-tests
         run: npm test
@@ -93,6 +97,10 @@ thống Linux mà Chromium cần (không có sẵn trên máy ảo CI trần) �
 cần trên máy Windows/macOS cá nhân.</li>
 <li><strong><code>if: always()</code></strong> ở bước upload — chạy dù bước trước đó pass hay fail, để <strong>luôn</strong> có báo cáo
 tải về xem, đặc biệt quan trọng khi test fail.</li>
+<li><strong><code>npm run typecheck</code></strong> (bổ sung sau khi rà soát lại sách ở Chương 30, dùng <code>tsconfig.json</code> —
+xem lại Chương 8) — chạy <code>tsc --noEmit</code> trước khi chạy test thật, bắt lỗi type (ví dụ gọi sai
+tham số một hàm) <strong>nhanh hơn</strong> nhiều so với để lỗi đó gây fail một test cụ thể rồi mới đi tìm
+nguyên nhân.</li>
 </ul>
 <h2>19.3. <code>webServer</code> hoạt động thế nào trên CI?</h2>
 <p>Nhắc lại Chương 9: <code>playwright.config.ts</code> có cấu hình <code>webServer</code> tự khởi động <code>demo-app</code>. Trên CI,

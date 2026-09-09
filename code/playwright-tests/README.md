@@ -19,6 +19,7 @@ npm test              # chạy toàn bộ test, chế độ headless
 npm run test:headed   # chạy có hiển thị trình duyệt
 npm run test:ui       # mở Playwright UI Mode (Chương 17)
 npm run report        # xem báo cáo HTML sau khi chạy
+npm run typecheck     # kiểm tra type TypeScript toàn project, không build gì (đã xác nhận: strict mode, 0 lỗi)
 ```
 
 ## File nào ứng với chương nào

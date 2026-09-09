@@ -39,10 +39,19 @@ playwright-tests/
 ├── playwright.config.ts   # cấu hình trung tâm: thư mục test, browser nào, retry, reporter...
 ├── tests/                 # nơi chứa các file test (*.spec.ts)
 │   └── ch08-smoke.spec.ts
+├── tsconfig.json          # bật type-check TypeScript strict mode cho editor + `npm run typecheck`
 ├── .gitignore             # loại report/kết quả test tự sinh ra khỏi git
 ├── .editorconfig          # thống nhất style editor (đã học ở Chương 7)
 └── .prettierrc            # cấu hình format code (đã học ở Chương 7)
 ```
+
+**Ghi chú (bổ sung sau khi rà soát lại toàn sách):** `tsconfig.json` không bắt buộc để `npm test`
+chạy được — Playwright Test tự biên dịch TypeScript nội bộ, không cần `tsc`. Nhưng thiếu nó, editor
+(VS Code) sẽ không biết `process`, `__dirname`, `path`... thuộc Node.js, gây gạch đỏ giả (false
+positive) khi mở file trong `playwright-tests/`. Thêm `tsconfig.json` (kèm `@types/node`) và script
+`npm run typecheck` (dùng `tsc --noEmit`, chỉ kiểm tra type, không build ra file gì) giải quyết
+đúng vấn đề này — đã xác nhận toàn bộ code trong `playwright-tests/` type-check sạch ở
+**`strict: true`**, kể cả sau khi thêm tới Chương 30.
 
 ### `playwright.config.ts` — trung tâm điều khiển
 

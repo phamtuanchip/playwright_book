@@ -32,6 +32,10 @@ jobs:
         working-directory: code/playwright-tests
         run: npx playwright install --with-deps chromium firefox webkit
 
+      - name: Type-check
+        working-directory: code/playwright-tests
+        run: npm run typecheck
+
       - name: Run Playwright tests
         working-directory: code/playwright-tests
         run: npm test

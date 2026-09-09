@@ -4,11 +4,11 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: ĐÃ VIẾT XONG TOÀN BỘ 30 chương + 3 phụ lục (33/33), có bản HTML build được, 63 test
-> Playwright chạy thật và pass, 2 bug thật được tìm & sửa trong quá trình viết. Xem `dist/index.html`
-> để đọc bản HTML. Còn lại: PDF, EPUB (mục 5).**
-> Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
-> nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
+> **Trạng thái: ĐÃ VIẾT XONG TOÀN BỘ 30 chương + 3 phụ lục (33/33), đã review lại toàn bộ, có bản
+> HTML (`dist/index.html`) và bản PDF (`dist/automation-testing-voi-playwright.pdf`) build sẵn, 63
+> test Playwright chạy thật và pass, toàn bộ code type-check sạch ở `strict: true`, 2 bug thật được
+> tìm & sửa trong quá trình viết. Chạy `npm install && npm run build:all` để tự build lại từ nguồn
+> Markdown. Còn lại: EPUB (mục 5).**
 
 ## 1. Mục tiêu & đối tượng độc giả
 
@@ -58,8 +58,8 @@ playwright_book/
 │   ├── component-testing/      # Chương 25: project React riêng biệt, minh hoạ component testing
 │   ├── mcp-basics/              # Chương 27: MCP server/client tối giản, chạy được thật
 │   └── playwright-mcp-demo/     # Chương 28: điều khiển demo-app qua @playwright/mcp thật
-├── tools/                     # Script build HTML (tools/build.js) + CSS (tools/style.css)
-├── dist/                      # HTML đã build (commit sẵn) — chạy `npm run build` để sinh lại
+├── tools/                     # Script build HTML (build.js+style.css) và PDF (build-pdf.js+pdf-style.css)
+├── dist/                      # HTML + PDF đã build (commit sẵn) — chạy `npm run build:all` để sinh lại
 └── README.md                  # File kế hoạch này
 ```
 
@@ -125,9 +125,12 @@ dụng đúng pipeline đã kiểm chứng.
 - `npm run build` đọc `book/manifest.json` + từng file `book/<part>/chXX-*.md`, sinh HTML đầy đủ
   vào `dist/` (sidebar điều hướng, prev/next, syntax highlight bằng highlight.js, sơ đồ Mermaid có
   zoom/pan). Chương chưa viết hiển thị "đang được biên soạn" thay vì lỗi build.
-- **PDF/EPUB**: chưa làm — theo đúng thứ tự ưu tiên đã chốt, chỉ build sau khi toàn bộ 33
-  chương đã viết xong và review. Khi tới lúc, tái sử dụng `tools/build-pdf.js` của `android_book`
-  (Puppeteer render HTML → in PDF) làm mẫu, không viết lại nội dung.
+- **Đã chốt và hoạt động cho PDF**: `npm run build:pdf` (`tools/build-pdf.js`, thích ứng từ
+  `android_book`) gộp toàn bộ 33 chương thành một trang HTML dài (bìa + mục lục + phần chia phần +
+  từng chương ngắt trang), dùng Puppeteer render Mermaid/highlight.js rồi in ra
+  `dist/automation-testing-voi-playwright.pdf` — không cần Pandoc/LaTeX. `npm run build:all` chạy
+  cả hai bước HTML + PDF.
+- **EPUB**: chưa làm — theo đúng thứ tự ưu tiên đã chốt (HTML → PDF → EPUB), để làm sau.
 
 ## 6. Tiến độ (progress tracker)
 
@@ -140,8 +143,9 @@ dụng đúng pipeline đã kiểm chứng.
 - [x] Viết xong Phần V (Chương 20–26: API testing → visual → storage state → song song → cross-browser → component testing → fixtures nâng cao), 55 test pass
 - [x] Viết xong Phần VI (Chương 27–30: MCP → Playwright MCP server → AI/self-healing → case study), 63 test pass
 - [x] Viết xong Phụ lục A–C (best practices, troubleshooting, tài liệu tham khảo)
-- [ ] Review toàn bộ nội dung
-- [ ] Build bản PDF
+- [x] Review toàn bộ nội dung (tìm & bổ sung `tsconfig.json`/`npm run typecheck` cho
+      `code/playwright-tests/`, thêm bước Type-check vào CI — xem Chương 8, 19)
+- [x] Build bản PDF (`dist/automation-testing-voi-playwright.pdf`)
 - [ ] Build bản EPUB
 
 ## 7. Các quyết định đã chốt trong quá trình viết
