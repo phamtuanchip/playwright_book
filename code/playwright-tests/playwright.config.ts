@@ -32,6 +32,25 @@ export default defineConfig({
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
+    // Chương 24: firefox/webkit/mobile-chrome CHỈ chạy file cross-browser (testMatch) — chạy
+    // lại toàn bộ suite trên cả 3 browser sẽ tốn gấp 3 thời gian CI, trong khi phần lớn test
+    // (Chương 11-23) không có lý do đặc biệt để cần verify riêng trên từng engine. Đây là lựa
+    // chọn phổ biến trong thực tế: chỉ chạy full cross-browser cho một bộ smoke test đại diện.
+    {
+      name: "firefox",
+      use: { ...devices["Desktop Firefox"] },
+      testMatch: /ch24-cross-browser-mobile\.spec\.ts/,
+    },
+    {
+      name: "webkit",
+      use: { ...devices["Desktop Safari"] },
+      testMatch: /ch24-cross-browser-mobile\.spec\.ts/,
+    },
+    {
+      name: "mobile-chrome",
+      use: { ...devices["Pixel 7"] },
+      testMatch: /ch24-cross-browser-mobile\.spec\.ts/,
+    },
   ],
 
   webServer: {

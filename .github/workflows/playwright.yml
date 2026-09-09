@@ -26,9 +26,11 @@ jobs:
         working-directory: code/playwright-tests
         run: npm ci
 
-      - name: Install Playwright browsers (Chromium only)
+      # Từ Chương 24: ch24-cross-browser-mobile.spec.ts chạy trên cả 4 project (chromium,
+      # firefox, webkit, mobile-chrome) — cần cài đủ cả 3 engine, không chỉ Chromium như trước.
+      - name: Install Playwright browsers (Chromium, Firefox, WebKit)
         working-directory: code/playwright-tests
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium firefox webkit
 
       - name: Run Playwright tests
         working-directory: code/playwright-tests

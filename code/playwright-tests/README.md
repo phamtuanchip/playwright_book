@@ -37,6 +37,7 @@ npm run report        # xem báo cáo HTML sau khi chạy
 | `tests/ch21-visual-testing.spec.ts` | 21 — `toHaveScreenshot()`; bị `test.skip` trên CI vì baseline tạo trên Windows (xem README này, mục dưới) |
 | `global-setup.ts` + `tests/ch22-auth-storage-state.spec.ts` | 22 — storage state (`storageState.json`) + endpoint seed `/api/test/seed-failed-attempts` cho TC-07 |
 | `tests/ch23-song-song-sharding.spec.ts` | 23 — chạy song song AN TOÀN (mỗi worker 1 tài khoản riêng qua `/api/test/create-user`), kiểm chứng thật với `--workers=4` |
+| `tests/ch24-cross-browser-mobile.spec.ts` | 24 — chạy trên 4 project (chromium/firefox/webkit/mobile-chrome), khai báo trong `playwright.config.ts` |
 
 ## Vì sao một project chung, không phải mỗi chương một project riêng?
 
