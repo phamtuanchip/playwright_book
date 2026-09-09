@@ -1,8 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
-// Cấu hình tối thiểu (Chương 8) — chỉ đủ để chạy một test đầu tiên, chưa có
-// baseURL/webServer vì demo app chưa tồn tại. Chương 9 sẽ thêm "webServer" để
-// tự động khởi chạy demo app, và "baseURL" để các test không cần gõ URL đầy đủ.
+// Chương 9: thêm "baseURL" (test không cần gõ URL đầy đủ, chỉ "/login") và "webServer"
+// (Playwright tự khởi chạy demo app trước khi chạy test, tự tắt sau khi xong — không cần
+// mở tay một terminal riêng để `npm start` trong code/demo-app/).
 export default defineConfig({
   testDir: "./tests",
   fullyParallel: true,
@@ -10,10 +10,22 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   reporter: "html",
 
+  use: {
+    baseURL: "http://localhost:3000",
+    trace: "on-first-retry",
+  },
+
   projects: [
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
     },
   ],
+
+  webServer: {
+    command: "npm start",
+    cwd: "../demo-app",
+    url: "http://localhost:3000/healthz",
+    reuseExistingServer: !process.env.CI,
+  },
 });

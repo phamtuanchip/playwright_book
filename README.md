@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 8/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 9/33 đã hoàn thành (xong Phần III), đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -76,7 +76,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 ### Phần III — Cài đặt môi trường
 7. ✅ Cài đặt Node.js, quản lý package (npm/pnpm), VS Code & extension hữu ích — [`book/part3-setup/ch07-cai-dat-nodejs.md`](book/part3-setup/ch07-cai-dat-nodejs.md)
 8. ✅ Khởi tạo project Playwright (`npm init playwright@latest`), cấu trúc thư mục project — [`book/part3-setup/ch08-khoi-tao-project-playwright.md`](book/part3-setup/ch08-khoi-tao-project-playwright.md) · project: [`code/playwright-tests/`](code/playwright-tests/)
-9. Giới thiệu demo app dùng xuyên suốt sách
+9. ✅ Giới thiệu demo app dùng xuyên suốt sách — [`book/part3-setup/ch09-demo-app.md`](book/part3-setup/ch09-demo-app.md) · app: [`code/demo-app/`](code/demo-app/)
 
 ### Phần IV — Playwright cơ bản
 10. Playwright là gì? Kiến trúc, so sánh nhanh với Selenium/Cypress
@@ -130,8 +130,8 @@ dụng đúng pipeline đã kiểm chứng.
 - [x] Dựng khung project (`book/`, `code/`, `tools/build.js`, `package.json`) + build HTML lần đầu
 - [x] Viết xong Phần I (Chương 1–3: SDLC, các loại kiểm thử, test case/plan/bug report) + ví dụ
 - [x] Viết xong Phần II (Chương 4–6: PQA/FQA/TQA, automation QA, kỹ năng) + ví dụ
-- [ ] Viết Phần III (Chương 7–9)
-- [ ] Viết Phần IV (Playwright cơ bản, Chương 10–19) — cần dựng demo app trước (Chương 9)
+- [x] Viết xong Phần III (Chương 7–9: cài đặt, khởi tạo project Playwright, demo app) + code chạy được
+- [ ] Viết Phần IV (Playwright cơ bản, Chương 10–19)
 - [ ] Viết Phần V (Playwright nâng cao, Chương 20–26)
 - [ ] Viết Phần VI (AI/MCP, Chương 27–30)
 - [ ] Viết Phụ lục A–C
