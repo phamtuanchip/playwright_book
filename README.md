@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 10/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 11/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -80,7 +80,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 
 ### Phần IV — Playwright cơ bản
 10. ✅ Playwright là gì? Kiến trúc, so sánh nhanh với Selenium/Cypress — [`book/part4-playwright-basics/ch10-playwright-la-gi.md`](book/part4-playwright-basics/ch10-playwright-la-gi.md)
-11. Test đầu tiên: Locators, Actions, Assertions
+11. ✅ Test đầu tiên: Locators, Actions, Assertions — [`book/part4-playwright-basics/ch11-locators-actions-assertions.md`](book/part4-playwright-basics/ch11-locators-actions-assertions.md) · code: [`code/playwright-tests/tests/ch11-login-test-cases.spec.ts`](code/playwright-tests/tests/ch11-login-test-cases.spec.ts)
 12. Cấu trúc test: `test`, `describe`, hooks (`beforeEach`/`afterEach`)
 13. Làm việc với form, input, dropdown, upload file
 14. Auto-waiting, xử lý bất đồng bộ, network

@@ -5,7 +5,12 @@ import { defineConfig, devices } from "@playwright/test";
 // mở tay một terminal riêng để `npm start` trong code/demo-app/).
 export default defineConfig({
   testDir: "./tests",
-  fullyParallel: true,
+  // Chương 11: tạm đặt fullyParallel=false + workers=1 — demo app dùng CHUNG một tài khoản
+  // (demo@example.com) trên MỘT server duy nhất, nên các test đổi trạng thái tài khoản đó
+  // (đăng nhập sai, khoá, reset...) sẽ đụng độ nếu chạy song song. Chương 23 quay lại vấn đề
+  // này đúng cách (mỗi worker seed dữ liệu riêng) để bật lại chạy song song an toàn.
+  fullyParallel: false,
+  workers: 1,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   reporter: "html",
