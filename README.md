@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 3/33 đã hoàn thành (xong Phần I), đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 4/33 đã hoàn thành, đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -66,7 +66,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 3. ✅ Test case, test plan, bug report — những khái niệm cơ bản mọi QA cần biết — [`book/part1-qa-fundamentals/ch03-test-case-plan-bug.md`](book/part1-qa-fundamentals/ch03-test-case-plan-bug.md) · ví dụ: [`code/ch03-test-case-plan-bug/`](code/ch03-test-case-plan-bug/)
 
 ### Phần II — Vai trò QA & Automation QA
-4. PQA (Product QA), FQA (Functional QA), TQA (Test/Technical QA) — phân biệt & trách nhiệm
+4. ✅ PQA (Product QA), FQA (Functional QA), TQA (Test/Technical QA) — phân biệt & trách nhiệm — [`book/part2-qa-roles/ch04-pqa-fqa-tqa.md`](book/part2-qa-roles/ch04-pqa-fqa-tqa.md) · ví dụ: [`code/ch04-pqa-fqa-tqa/`](code/ch04-pqa-fqa-tqa/)
 5. Automation QA là gì? Khi nào nên tự động hoá, khi nào không
 6. Kỹ năng & tư duy cần có của một Automation QA Engineer
 
