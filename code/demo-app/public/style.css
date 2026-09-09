@@ -37,15 +37,38 @@ header nav a {
   flex: 1;
 }
 
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.checkbox-field label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .field-error,
-.server-error {
-  color: #c0392b;
+.server-error,
+.server-success {
   font-size: 0.85rem;
   display: block;
   margin-top: 4px;
 }
+.field-error,
+.server-error {
+  color: #c0392b;
+}
+.server-success {
+  color: #1e7e34;
+}
 .field-error:empty,
-.server-error:empty {
+.server-error:empty,
+.server-success:empty {
   display: none;
 }
 

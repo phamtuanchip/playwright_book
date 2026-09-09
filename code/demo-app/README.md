@@ -24,6 +24,8 @@ báo `webServer` để Playwright tự khởi động app này trước khi ch�
 | `GET /dashboard` | Trang sau khi đăng nhập (cần session) |
 | `GET /orders` | Trang ví dụ cho luồng redirect (TC-10) |
 | `GET /logout` | Xoá session |
+| `GET /profile` | Form hồ sơ: text input, textarea, dropdown, checkbox, upload file (Chương 13) |
+| `POST /api/profile` | API cập nhật hồ sơ (multipart/form-data, dùng `multer`) |
 | `POST /api/test/reset` | **Chỉ dùng cho test**: seed lại tài khoản demo (xoá lockout, reset số lần sai) — xem Chương 22 |
 | `GET /healthz` | Endpoint Playwright dùng để biết server đã sẵn sàng |
 

@@ -2,6 +2,7 @@
 
 const express = require("express");
 const cookieParser = require("cookie-parser");
+const multer = require("multer");
 const path = require("path");
 const {
   users,
@@ -9,8 +10,12 @@ const {
   createSession,
   getSessionUser,
   destroySession,
+  getProfile,
+  updateProfile,
 } = require("./src/store");
-const { loginPage, dashboardPage, ordersPage } = require("./src/views");
+const { loginPage, dashboardPage, ordersPage, profilePage } = require("./src/views");
+
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 2 * 1024 * 1024 } });
 
 const app = express();
 const LOCK_DURATION_MS = 15 * 60 * 1000;
@@ -84,6 +89,27 @@ app.get("/logout", (req, res) => {
 
 app.get("/dashboard", requireAuth, (req, res) => res.send(dashboardPage(req.user)));
 app.get("/orders", requireAuth, (req, res) => res.send(ordersPage(req.user)));
+
+app.get("/profile", requireAuth, (req, res) => {
+  res.send(profilePage(req.user, getProfile(req.user.email)));
+});
+
+app.post("/api/profile", requireAuth, upload.single("avatar"), (req, res) => {
+  const { displayName, bio, country, notifications } = req.body;
+  if (!displayName || !displayName.trim()) {
+    return res.json({ ok: false, message: "Tên hiển thị là bắt buộc" });
+  }
+
+  const current = getProfile(req.user.email);
+  const profile = updateProfile(req.user.email, {
+    displayName: displayName.trim(),
+    bio: bio || "",
+    country: country || "VN",
+    notifications: notifications === "on" || notifications === "true",
+    avatarFileName: req.file ? req.file.originalname : current.avatarFileName,
+  });
+  res.json({ ok: true, profile });
+});
 
 // Chỉ phục vụ mục đích test tự động: seed lại trạng thái tài khoản demo (xoá lockout,
 // reset số lần sai) để mỗi lần chạy test không phụ thuộc kết quả lần chạy trước — xem Chương 22.
