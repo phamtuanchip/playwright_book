@@ -4,7 +4,7 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: đang viết — Chương 2/33 đã hoàn thành, đã có bản HTML build được.**
+> **Trạng thái: đang viết — Chương 3/33 đã hoàn thành (xong Phần I), đã có bản HTML build được.**
 > Xem `dist/index.html` để đọc bản HTML (chạy `npm install && npm run build` để tự build từ
 > nguồn Markdown). Còn lại: 32 chương + PDF + EPUB.
 
@@ -63,7 +63,7 @@ mục ví dụ/code trong `code/chXX-slug/`, có README riêng hướng dẫn d�
 ### Phần I — Nền tảng QA trong SDLC
 1. ✅ SDLC là gì? Vị trí của kiểm thử (Testing) trong vòng đời phát triển phần mềm — [`book/part1-qa-fundamentals/ch01-sdlc.md`](book/part1-qa-fundamentals/ch01-sdlc.md) · ví dụ: [`code/ch01-sdlc/`](code/ch01-sdlc/)
 2. ✅ Các loại kiểm thử: Manual vs Automation, Unit / Integration / E2E / Regression — [`book/part1-qa-fundamentals/ch02-loai-kiem-thu.md`](book/part1-qa-fundamentals/ch02-loai-kiem-thu.md) · ví dụ: [`code/ch02-loai-kiem-thu/`](code/ch02-loai-kiem-thu/)
-3. Test case, test plan, bug report — những khái niệm cơ bản mọi QA cần biết
+3. ✅ Test case, test plan, bug report — những khái niệm cơ bản mọi QA cần biết — [`book/part1-qa-fundamentals/ch03-test-case-plan-bug.md`](book/part1-qa-fundamentals/ch03-test-case-plan-bug.md) · ví dụ: [`code/ch03-test-case-plan-bug/`](code/ch03-test-case-plan-bug/)
 
 ### Phần II — Vai trò QA & Automation QA
 4. PQA (Product QA), FQA (Functional QA), TQA (Test/Technical QA) — phân biệt & trách nhiệm
@@ -125,8 +125,8 @@ dụng đúng pipeline đã kiểm chứng.
 
 - [x] Chốt mục lục chi tiết
 - [x] Dựng khung project (`book/`, `code/`, `tools/build.js`, `package.json`) + build HTML lần đầu
-- [x] Viết Chương 1 (SDLC) + ví dụ (`code/ch01-sdlc/`)
-- [ ] Viết nốt Phần I–III (Chương 2–9)
+- [x] Viết xong Phần I (Chương 1–3: SDLC, các loại kiểm thử, test case/plan/bug report) + ví dụ
+- [ ] Viết Phần II–III (Chương 4–9)
 - [ ] Viết Phần IV (Playwright cơ bản, Chương 10–19) — cần dựng demo app trước (Chương 9)
 - [ ] Viết Phần V (Playwright nâng cao, Chương 20–26)
 - [ ] Viết Phần VI (AI/MCP, Chương 27–30)
