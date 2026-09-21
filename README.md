@@ -1,4 +1,5 @@
 # Playwright Book — Kế hoạch biên soạn sách
+**Đọc online (GitHub Pages): https://phamtuanchip.github.io/playwright_book/**
 
 Sách automation testing với Playwright bằng tiếng Việt, dành cho người đã biết lập trình JS cơ
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
