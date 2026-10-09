@@ -5,11 +5,6 @@ Sách automation testing với Playwright bằng tiếng Việt, dành cho ngư�
 bản, đi từ khái niệm QA nền tảng trong SDLC đến làm chủ Playwright toàn diện, và mở rộng sang
 AI + MCP/Browser automation. Mỗi chương kèm ví dụ/code mẫu chạy được.
 
-> **Trạng thái: ĐÃ VIẾT XONG TOÀN BỘ 30 chương + 3 phụ lục (33/33), đã review lại toàn bộ, có bản
-> HTML (`dist/index.html`) và bản PDF (`dist/automation-testing-voi-playwright.pdf`) build sẵn, 63
-> test Playwright chạy thật và pass, toàn bộ code type-check sạch ở `strict: true`, 2 bug thật được
-> tìm & sửa trong quá trình viết. Chạy `npm install && npm run build:all` để tự build lại từ nguồn
-> Markdown. Còn lại: EPUB (mục 5).**
 
 ## 1. Mục tiêu & đối tượng độc giả
 
