@@ -26,7 +26,7 @@ winget install OpenJS.NodeJS.LTS
 **macOS** (dùng Homebrew):
 
 ```bash
-brew install node@22
+brew install node@24
 ```
 
 **Linux** (Ubuntu/Debian, qua NodeSource):
@@ -41,7 +41,7 @@ sudo apt install -y nodejs
 Mở terminal mới (bắt buộc mở **mới** để nhận PATH vừa cập nhật) và chạy:
 
 ```bash
-node -v    # ví dụ: v22.14.0
+node -v    # ví dụ: v24.x (bản LTS hiện hành)
 npm -v     # ví dụ: 10.9.2
 ```
 
